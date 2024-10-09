@@ -1,0 +1,28 @@
+[Info]
+Description = License file for LEADTOOLS SDK
+Javascript License
+Development License
+
+[Expiration]
+Expiry Date = 7/22/2024
+
+[Customer]
+Company = TAB Products Co LLC
+Application = TAB FusionRMS SaaS (LEAD 22)
+LEADContact = licensing@leadtools.com
+UserContact = jtschudy@tab.com
+
+[Product]
+Version = 22.0
+PurchaseDate = 1/24/2024
+Product1 = REC22
+
+[Unlocks]
+Basic
+App Store
+
+[Domain Locks]
+Lock = (default)
+
+[JSLicense]
+License = {"ver":"3.0","code":"xWnPC5LykuMGBEHJhjPmK9/rK2FLnPmAgGQjW/GJs3KNFAR+O745h29KQKO4e9ldG+XqtXVK3OnMmUFA53pSyXbsJcF2x0t560L6KLteQRKugSA5SpfIhkg4mg1FUM/SXNxitGYD/RosE1YtdatswuDpvTATdZ9bAJmMHAKi/3BB/PNmpOLoQqI37gWO2wf8rZVP133j4dSElq1RJ5x6M7L8Smm8UUal57LZll2fQVSYVepnQbc8pfjEIHgslgiONSDmHi4+oSkQzFo5eIV9Z9eAQ554W3kWztRlPyglYIXIDoTL8eXdCEkQ2NkYlT6aHtqDWmf9D9x9b6Hmyv/wznKj5Qh5HnfsamHuDmTXNwWPJq8uoAlWoufgken0x1EYv9GKxMgLdiTFO70Is4V3GthY85QpKW9cClvf9C+6GijMQ0OQSZaBGjJxFVIk5NiH6oPgCuOc2FwpqWaRiFu930ch+Qu2WETTzJeWeNqpog946s4x8WH+OtNt9KPpRQdkEM3Fkm2+5K6Z5eXGeM4c2GJGwE0PmLXbMIMHI93JhUoBj/gELAgXCqxrexxTgpiCFQ+PhE3/9x41qJAdxz7/+43n+6BCfHrYxCrPX+NYA8uTDimBcump4YlmN0sIYWJnaWC5du93MtHVdGSYSW0y7oRE27rzkYKxsScT92toxUI9KbAvFzFJJiChFGWrHdTzSyoVo3lep2JQgHWnDktycpQzpS2WbEu0uPPQ58jBV+YVsA2/Pm2c//5OEmbiXGy52JcJLOE/++VTXXO8QXB3Oy8S52atePgF0sACaJ70ymkDbE2+xW1A7hzXlc3rMj3FgZnMXj9PEXT1f/p1fpoM8uDmMhz5KrQva0Wr3FNT5/uEKOdBlukF5PRs7XRTCHizwegbhtLtlQWTtUC9BCpaGn6C1y1QKpMfgar8iw4veW37/uUmOMENyRzreeWZVfCneEUAVpSiCEURKPxvv4ybT3kfnUteVpzZ3iQjPmay6lZdqlI5VcvRXBZThzz3z+1sZkC7kXHA9fAydAtso0SZ7X0qmowknY5krf98WksQz8W7iMgPjEibC+qMxXhR2PAAGoInKDoagg1TAw=="}

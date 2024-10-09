@@ -1,0 +1,507 @@
+{
+  "$type": "DocumentComposite",
+  "title": "LEADTOOLS Document Analyzer",
+  "elementset": [
+    {
+      "$type": "UnstructuredElementSet",
+      "feature": "unstructured",
+      "name": "g_CITY, STATE, ZIP CODE",
+      "version": "1.0",
+      "element": {
+        "$type": "GroupElement",
+        "elements": [
+          {
+            "$type": "GroupElement",
+            "elements": [
+              {
+                "$type": "RegexInspectorElement",
+                "includeWholeWord": false,
+                "includeWholeLine": false,
+                "multipleLinesMatching": false,
+                "regexParameters": [
+                  {
+                    "$type": "RegexParameters",
+                    "pattern": "(6 City, state|City or town|City, town)",
+                    "patternIsOEM": false,
+                    "ignoreSpaces": false,
+                    "ignoreCase": true,
+                    "approximateRegexMode": "DISABLED",
+                    "useLettersToNumbersMapping": false,
+                    "allowSubWordsMatching": true,
+                    "minimumLength": 1,
+                    "maximumCost": 0
+                  }
+                ],
+                "inputVariableIds": [],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "City, state, zip code_label"
+              },
+              {
+                "$type": "RelativeLocationElement",
+                "relativeLocationParameters": [
+                  {
+                    "$type": "RelativeLocationParameter",
+                    "location": "BELOW",
+                    "searchWindowSize": {
+                      "$type": "SearchWindowSize",
+                      "windowSize": 1,
+                      "gapWindowSize": 2,
+                      "sizeUnit": "TEXT_LINES"
+                    }
+                  }
+                ],
+                "inputVariableIds": [
+                  "City, state, zip code_label"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "City, state, zip code_location"
+              },
+              {
+                "$type": "RegexInspectorElement",
+                "includeWholeWord": true,
+                "includeWholeLine": false,
+                "multipleLinesMatching": false,
+                "regexParameters": [
+                  {
+                    "$type": "RegexParameters",
+                    "pattern": "[A-Za-z]+,(\\s)?[A-Za-z]+,(\\s)?\\d{5}",
+                    "patternIsOEM": false,
+                    "ignoreSpaces": false,
+                    "ignoreCase": true,
+                    "approximateRegexMode": "AUTO",
+                    "useLettersToNumbersMapping": false,
+                    "allowSubWordsMatching": true,
+                    "minimumLength": 1,
+                    "maximumCost": -1
+                  }
+                ],
+                "inputVariableIds": [
+                  "City, state, zip code_location"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "City, state, zip code_value"
+              }
+            ],
+            "logicalOperationElement": null,
+            "inputVariableIds": [],
+            "functions": [],
+            "settings": {
+              "$type": "SettingsManager",
+              "settings": {
+                "REPORT_IN_ELEMENT_RESULT": "false",
+                "NAME": "group_City, state, zip code"
+              }
+            },
+            "id": "group_CITY, STATE, ZIP CODE"
+          },
+          {
+            "$type": "GroupElement",
+            "elements": [
+              {
+                "$type": "RegexInspectorElement",
+                "includeWholeWord": false,
+                "includeWholeLine": false,
+                "multipleLinesMatching": false,
+                "regexParameters": [
+                  {
+                    "$type": "RegexParameters",
+                    "pattern": "Your social",
+                    "patternIsOEM": false,
+                    "ignoreSpaces": false,
+                    "ignoreCase": true,
+                    "approximateRegexMode": "DISABLED",
+                    "useLettersToNumbersMapping": false,
+                    "allowSubWordsMatching": true,
+                    "minimumLength": 1,
+                    "maximumCost": 0
+                  }
+                ],
+                "inputVariableIds": [],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Custom SSN_label"
+              },
+              {
+                "$type": "RelativeLocationElement",
+                "relativeLocationParameters": [
+                  {
+                    "$type": "RelativeLocationParameter",
+                    "location": "BELOW",
+                    "searchWindowSize": {
+                      "$type": "SearchWindowSize",
+                      "windowSize": 1,
+                      "gapWindowSize": 2,
+                      "sizeUnit": "TEXT_LINES"
+                    }
+                  }
+                ],
+                "inputVariableIds": [
+                  "Custom SSN_label"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Custom SSN_location"
+              },
+              {
+                "$type": "RegexInspectorElement",
+                "includeWholeWord": true,
+                "includeWholeLine": false,
+                "multipleLinesMatching": false,
+                "regexParameters": [
+                  {
+                    "$type": "RegexParameters",
+                    "pattern": "\\d{1}(\\s)?\\d{1}(\\s)?\\d{1}(\\s)?\\d{1}(\\s)?\\d{1}(\\s)?\\d{1}(\\s)?\\d{1}(\\s)?\\d{1}(\\s)?\\d{1}",
+                    "patternIsOEM": false,
+                    "ignoreSpaces": false,
+                    "ignoreCase": true,
+                    "approximateRegexMode": "AUTO",
+                    "useLettersToNumbersMapping": false,
+                    "allowSubWordsMatching": true,
+                    "minimumLength": 1,
+                    "maximumCost": -1
+                  }
+                ],
+                "inputVariableIds": [
+                  "Custom SSN_location"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Custom SSN_value"
+              }
+            ],
+            "logicalOperationElement": null,
+            "inputVariableIds": [],
+            "functions": [],
+            "settings": {
+              "$type": "SettingsManager",
+              "settings": {
+                "REPORT_IN_ELEMENT_RESULT": "false",
+                "NAME": "group_Custom SSN"
+              }
+            },
+            "id": "group_CUSTOM SSN"
+          },
+          {
+            "$type": "GroupElement",
+            "elements": [
+              {
+                "$type": "RegexInspectorElement",
+                "includeWholeWord": false,
+                "includeWholeLine": false,
+                "multipleLinesMatching": false,
+                "regexParameters": [
+                  {
+                    "$type": "RegexParameters",
+                    "pattern": "(5 Address|Address|Home address)",
+                    "patternIsOEM": false,
+                    "ignoreSpaces": false,
+                    "ignoreCase": true,
+                    "approximateRegexMode": "DISABLED",
+                    "useLettersToNumbersMapping": false,
+                    "allowSubWordsMatching": true,
+                    "minimumLength": 1,
+                    "maximumCost": 0
+                  }
+                ],
+                "inputVariableIds": [],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Street Address_label"
+              },
+              {
+                "$type": "RelativeLocationElement",
+                "relativeLocationParameters": [
+                  {
+                    "$type": "RelativeLocationParameter",
+                    "location": "BELOW",
+                    "searchWindowSize": {
+                      "$type": "SearchWindowSize",
+                      "windowSize": 1,
+                      "gapWindowSize": 2,
+                      "sizeUnit": "TEXT_LINES"
+                    }
+                  }
+                ],
+                "inputVariableIds": [
+                  "Street Address_label"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Street Address_location"
+              },
+              {
+                "$type": "RegexInspectorElement",
+                "includeWholeWord": false,
+                "includeWholeLine": false,
+                "multipleLinesMatching": false,
+                "regexParameters": [
+                  {
+                    "$type": "RegexParameters",
+                    "pattern": "value:Street Address",
+                    "patternIsOEM": true,
+                    "ignoreSpaces": false,
+                    "ignoreCase": true,
+                    "approximateRegexMode": "AUTO",
+                    "useLettersToNumbersMapping": false,
+                    "allowSubWordsMatching": true,
+                    "minimumLength": 1,
+                    "maximumCost": -1
+                  }
+                ],
+                "inputVariableIds": [
+                  "Street Address_location"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Street Address_value"
+              }
+            ],
+            "logicalOperationElement": null,
+            "inputVariableIds": [],
+            "functions": [],
+            "settings": {
+              "$type": "SettingsManager",
+              "settings": {
+                "REPORT_IN_ELEMENT_RESULT": "false",
+                "NAME": "group_Street Address"
+              }
+            },
+            "id": "group_STREET ADDRESS"
+          },
+          {
+            "$type": "GroupElement",
+            "elements": [
+              {
+                "$type": "RegexInspectorElement",
+                "includeWholeWord": false,
+                "includeWholeLine": false,
+                "multipleLinesMatching": false,
+                "regexParameters": [
+                  {
+                    "$type": "RegexParameters",
+                    "pattern": "(1\\sName|Your first name)",
+                    "patternIsOEM": false,
+                    "ignoreSpaces": false,
+                    "ignoreCase": true,
+                    "approximateRegexMode": "DISABLED",
+                    "useLettersToNumbersMapping": false,
+                    "allowSubWordsMatching": true,
+                    "minimumLength": 1,
+                    "maximumCost": 0
+                  }
+                ],
+                "inputVariableIds": [],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Name_label"
+              },
+              {
+                "$type": "RelativeLocationElement",
+                "relativeLocationParameters": [
+                  {
+                    "$type": "RelativeLocationParameter",
+                    "location": "BELOW",
+                    "searchWindowSize": {
+                      "$type": "SearchWindowSize",
+                      "windowSize": 1,
+                      "gapWindowSize": 2,
+                      "sizeUnit": "TEXT_LINES"
+                    }
+                  }
+                ],
+                "inputVariableIds": [
+                  "Name_label"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Name_location"
+              },
+              {
+                "$type": "RegexInspectorElement",
+                "includeWholeWord": true,
+                "includeWholeLine": false,
+                "multipleLinesMatching": false,
+                "regexParameters": [
+                  {
+                    "$type": "RegexParameters",
+                    "pattern": "[A-Za-z]+(\\s)?[A-Za-z]+",
+                    "patternIsOEM": false,
+                    "ignoreSpaces": false,
+                    "ignoreCase": true,
+                    "approximateRegexMode": "AUTO",
+                    "useLettersToNumbersMapping": false,
+                    "allowSubWordsMatching": true,
+                    "minimumLength": 1,
+                    "maximumCost": -1
+                  }
+                ],
+                "inputVariableIds": [
+                  "Name_location"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Name_value"
+              }
+            ],
+            "logicalOperationElement": null,
+            "inputVariableIds": [],
+            "functions": [],
+            "settings": {
+              "$type": "SettingsManager",
+              "settings": {
+                "REPORT_IN_ELEMENT_RESULT": "false",
+                "NAME": "group_Name"
+              }
+            },
+            "id": "group_NAME"
+          },
+          {
+            "$type": "GroupElement",
+            "elements": [
+              {
+                "$type": "RegexInspectorElement",
+                "includeWholeWord": false,
+                "includeWholeLine": false,
+                "multipleLinesMatching": true,
+                "regexParameters": [
+                  {
+                    "$type": "RegexParameters",
+                    "pattern": "value:Social Security Number",
+                    "patternIsOEM": true,
+                    "ignoreSpaces": false,
+                    "ignoreCase": true,
+                    "approximateRegexMode": "AUTO",
+                    "useLettersToNumbersMapping": false,
+                    "allowSubWordsMatching": true,
+                    "minimumLength": 1,
+                    "maximumCost": -1
+                  }
+                ],
+                "inputVariableIds": [],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Social Security Number"
+              }
+            ],
+            "logicalOperationElement": null,
+            "inputVariableIds": [],
+            "functions": [
+              {
+                "$type": "ProxyFunction"
+              }
+            ],
+            "settings": {
+              "$type": "SettingsManager",
+              "settings": {
+                "REPORT_IN_ELEMENT_RESULT": "false",
+                "NAME": "group_Social Security Number"
+              }
+            },
+            "id": "group_SOCIAL SECURITY NUMBER"
+          },
+          {
+            "$type": "LogicalOperationElement",
+            "logicalOperationType": "OR",
+            "inputVariableIds": [
+              "group_CITY, STATE, ZIP CODE",
+              "group_CUSTOM SSN",
+              "group_STREET ADDRESS",
+              "group_NAME",
+              "group_SOCIAL SECURITY NUMBER"
+            ],
+            "functions": [],
+            "settings": {
+              "$type": "SettingsManager",
+              "settings": {
+                "REPORT_IN_ELEMENT_RESULT": "false"
+              }
+            },
+            "id": "City, state, zip code_combined"
+          }
+        ],
+        "logicalOperationElement": null,
+        "inputVariableIds": [],
+        "functions": [],
+        "settings": {
+          "$type": "SettingsManager",
+          "settings": {
+            "REPORT_IN_ELEMENT_RESULT": "true",
+            "NAME": "g_City, state, zip code",
+            "LANGUAGES": "en"
+          }
+        },
+        "id": "g_CITY, STATE, ZIP CODE"
+      }
+    }
+  ],
+  "actions": null,
+  "meta": "[{\"InstanceType\":\"CustomFeature\",\"Location\":\"Leadtools.Document.Unstructured.Highlevel\",\"Instance\":{\"Label\":[{\"Name\":null,\"Value\":{\"Name\":null,\"Pattern\":\"(6 City, state|City or town|City, town)\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"DISABLED\"},\"TweaksForResults\":{\"IncludeWholeWord\":false,\"IncludeWholeLine\":false}},\"Where\":\"LINE_BELOW\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":0,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false}],\"Value\":[{\"Name\":null,\"Pattern\":\"[A-Za-z]+,(\\\\s)?[A-Za-z]+,(\\\\s)?\\\\d{5}\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"AUTO\"},\"TweaksForResults\":{\"IncludeWholeWord\":true,\"IncludeWholeLine\":false}}],\"HasLabel\":true,\"HasValues\":true,\"Name\":\"City, state, zip code\",\"Excluded\":false,\"Excluding\":[],\"CustomFunctions\":[]},\"ResourceType\":\"DataModel\",\"ImplVersion\":\"1.0\"},{\"InstanceType\":\"CustomFeature\",\"Location\":\"Leadtools.Document.Unstructured.Highlevel\",\"Instance\":{\"Label\":[{\"Name\":null,\"Value\":{\"Name\":null,\"Pattern\":\"Your social\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"DISABLED\"},\"TweaksForResults\":{\"IncludeWholeWord\":false,\"IncludeWholeLine\":false}},\"Where\":\"LINE_BELOW\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":0,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false}],\"Value\":[{\"Name\":null,\"Pattern\":\"\\\\d{1}(\\\\s)?\\\\d{1}(\\\\s)?\\\\d{1}(\\\\s)?\\\\d{1}(\\\\s)?\\\\d{1}(\\\\s)?\\\\d{1}(\\\\s)?\\\\d{1}(\\\\s)?\\\\d{1}(\\\\s)?\\\\d{1}\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"AUTO\"},\"TweaksForResults\":{\"IncludeWholeWord\":true,\"IncludeWholeLine\":false}}],\"HasLabel\":true,\"HasValues\":true,\"Name\":\"Custom SSN\",\"Excluded\":false,\"Excluding\":[],\"CustomFunctions\":[]},\"ResourceType\":\"DataModel\",\"ImplVersion\":\"1.0\"},{\"InstanceType\":\"StandardFeature\",\"Location\":\"Leadtools.Document.Unstructured.Highlevel\",\"Instance\":{\"LabelName\":\"\",\"LabelOptions\":{\"Name\":null,\"Value\":null,\"Where\":\"RIGHT\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":0,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false},\"LabelCanSpanLines\":false,\"CustomLabel\":true,\"ValueName\":\"Street Address\",\"ValueCanSpanLines\":false,\"CustomValue\":false,\"CustomLabels\":[{\"Name\":null,\"Value\":{\"Name\":null,\"Pattern\":\"(5 Address|Address|Home address)\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"DISABLED\"},\"TweaksForResults\":{\"IncludeWholeWord\":false,\"IncludeWholeLine\":false}},\"Where\":\"LINE_BELOW\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false}],\"CustomValues\":[],\"HasCustomLabel\":true,\"HasCustomValue\":false,\"Name\":\"Street Address\",\"Excluded\":false,\"Excluding\":[],\"CustomFunctions\":[]},\"ResourceType\":\"DataModel\",\"ImplVersion\":\"1.0\"},{\"InstanceType\":\"CustomFeature\",\"Location\":\"Leadtools.Document.Unstructured.Highlevel\",\"Instance\":{\"Label\":[{\"Name\":null,\"Value\":{\"Name\":null,\"Pattern\":\"(1\\\\sName|Your first name)\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"DISABLED\"},\"TweaksForResults\":{\"IncludeWholeWord\":false,\"IncludeWholeLine\":false}},\"Where\":\"LINE_BELOW\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":0,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false}],\"Value\":[{\"Name\":null,\"Pattern\":\"[A-Za-z]+(\\\\s)?[A-Za-z]+\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"AUTO\"},\"TweaksForResults\":{\"IncludeWholeWord\":true,\"IncludeWholeLine\":false}}],\"HasLabel\":true,\"HasValues\":true,\"Name\":\"Name\",\"Excluded\":false,\"Excluding\":[],\"CustomFunctions\":[]},\"ResourceType\":\"DataModel\",\"ImplVersion\":\"1.0\"},{\"InstanceType\":\"StandardFeature\",\"Location\":\"Leadtools.Document.Unstructured.Highlevel\",\"Instance\":{\"LabelName\":null,\"LabelOptions\":{\"Name\":null,\"Value\":{\"Name\":null,\"Pattern\":\"\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"DISABLED\"},\"TweaksForResults\":{\"IncludeWholeWord\":false,\"IncludeWholeLine\":false}},\"Where\":\"RIGHT\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false},\"LabelCanSpanLines\":false,\"CustomLabel\":false,\"ValueName\":\"Social Security Number\",\"ValueCanSpanLines\":true,\"CustomValue\":false,\"CustomLabels\":[],\"CustomValues\":[],\"HasCustomLabel\":false,\"HasCustomValue\":false,\"Name\":\"Social Security Number\",\"Excluded\":false,\"Excluding\":[],\"CustomFunctions\":[\"validate:SSN\"]},\"ResourceType\":\"DataModel\",\"ImplVersion\":\"1.0\"}]"
+}

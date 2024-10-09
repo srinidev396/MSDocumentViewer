@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>JS Document Service</title>
+   <meta charset="utf-8" />
+   <link rel="shortcut icon" type="image/x-icon" href="Resources/Images/favicon.ico" />
+   <link rel="stylesheet" href="Resources/Styles/LEADServiceStyles.css" />
+   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+   <script src="index.js"></script>
+</head>
+<body>
+   <div id="container">
+      <nav></nav>
+      <header>
+        <!-- <a class="header-img" target="_blank" rel="noopener noreferrer" href="https://www.leadtools.com"><img src="Resources/Images/LeadtoolsHeader.png" alt="LEADTOOLS - The World Leader in Imaging SDKs" /></a>-->
+         <h1>Document Library Service</h1>
+         <p>
+            The Document Service is used with the LEADTOOLS SDK for JavaScript and HTML5.
+         </p>
+         <p>
+            A live version of the Document Viewer demo hosted on the LEADTOOLS.com site can be found here:
+            <a href="https://www.leadtools.com/demos/html5" target="_blank" rel="noopener noreferrer">LEADTOOLS HTML5 demos page</a>.
+         </p>
+         <p>
+            The XML Comments, in-code, are automatically compiled and are available for viewing here: <a href="help" target="_blank" class="monospace">/help</a>.
+         </p>
+         <p>
+            By default, all routing is handled within the "/api" namespace.
+         </p>
+      </header>
+      <div id="content">
+         <hr />
+         <div>
+            <h3>Ping</h3>
+            <p>The status of the service can be checked here: <a href="api/Test/Ping" class="monospace">api/Test/Ping</a>.</p>
+            <div class="bordered">
+               <button id="refreshPingStatistics" disabled>Refresh Ping</button>
+               <section>
+                  <div id="pingStats" class="stats hide"></div>
+               </section>
+            </div>
+         </div>
+         <hr />
+         <div>
+            <h3>Cache Operations Access</h3>
+            <p>
+               The caching and pre-caching endpoints accessible by this page accept a simple passcode in order to deny unwanted users access to important information.
+               For a production deployed application, consider more advanced security techniques.
+            </p>
+            <section>
+               <label for="cacheOpsPasscode">Passcode:</label>
+               <input type="text" id="cacheOpsPasscode" class="cache-passcode" />
+            </section>
+         </div>
+         <hr />
+         <div>
+            <h3>Cache</h3>
+            <p>The Document Viewer Service uses a cache system for quicker access to document information. The information below will include pre-cached documents.</p>
+            <div class="bordered">
+               <button id="refreshCacheStatistics" disabled>Refresh Cache Statistics</button>
+               <button id="purgeCacheButton">Purge Cache</button>
+               <section>
+                  <div id="cacheStats" class="stats loud hide"></div>
+               </section>
+            </div>
+            <dl>
+               <dt><strong>Regions</strong></dt>
+               <dd>Regions usually represent a document or a conversion / save result.</dd>
+               <dt><strong>Items</strong></dt>
+               <dd>Items represent some cache entity, such as a document page, thumbnail, OCR result, etc.</dd>
+               <dt><strong>Expired Items</strong></dt>
+               <dd>Expired Items are those in the cache that are past the expiration set in the <span class="monospace">.config</span> file.</dd>
+            </dl>
+         </div>
+         <hr />
+         <div>
+            <h3>Pre-Caching</h3>
+            <p>
+               Documents can be pre-cached (using multiple values of <span class="code">maximumImagePixelSize</span>)
+               so that certain data, such as OCR text or SVG images, will be readily available in the client.
+            </p>
+            <p>
+               The time taken to pre-cache a document scales with the complexity of a document, and for very large files will take minutes.
+            </p>
+            <div class="bordered">
+               <section>
+                  <input type="text" id="preCacheInput" />
+                  <button id="addToPreCache" disabled>Pre-Cache URL</button>
+               </section>
+               <section>
+                  <div id="preCacheResponse" class="stats">
+                     Pre-cache a document using the input above.
+                  </div>
+               </section>
+            </div>
+            <p>The Pre-Cache list, which itself is a cache, can be "cleaned" to remove references to documents that have been deleted from the regular cache.</p>
+            <div class="bordered">
+               <button id="refreshPreCacheStatistics" disabled>Clean &amp; Refresh Pre-Cache List</button>
+               <section>
+                  <div id="preCacheStats" class="stats hide"></div>
+               </section>
+            </div>
+         </div>
+         <hr />
+         <div>
+            <h3>Development</h3>
+            <p>
+               For a guide to better understanding this project for development, see the <a href="Resources/development.html">development page</a>.
+            </p>
+         </div>
+         <hr />
+         <div>
+            <h3>Connecting a Client</h3>
+            <p>
+               This project contains the Document Service Web Api project only. To use this service, create a client-side application
+               with the LEADTOOLS Document JavaScript Library and connect via the below setup properties
+               (which are specified in the DocumentViewerApp project's <span class="code">serviceConfig.json</span>):
+            </p>
+            <dl>
+               <dt><span class="code">lt.Document.DocumentFactory.serviceHost</span></dt>
+               <dd>The host of the service (including protocol).</dd>
+               <dd>Keep the default value, <span class="monospace">null</span>, if the host is the same as the client.</dd>
+               <dt><span class="code">lt.Document.DocumentFactory.servicePath</span></dt>
+               <dd>The virtual path from the service's host to the root of the service project.</dd>
+               <dd>Keep the default value, <span class="monospace">null</span>, if the path is the same as the virtual path from the client app's host to the client app.</dd>
+               <dt><span class="code">lt.Document.DocumentFactory.serviceApiPath</span></dt>
+               <dd>The path to the routing namespace of the Document Service, which by default is <span class="monospace">null</span>.</dd>
+               <dd>Always specify the value as "api" unless the routing namespace is changed in <span class="code">WebApiConfig.cs</span>.</dd>
+            </dl>
+            <p>
+               These properties are processed and concatenated to produce the <span class="code">lt.Document.DocumentFactory.serviceUrl</span>
+               used by the client.
+            </p>
+         </div>
+      </div>
+      <div id="footer">
+         <div id="footerLinks">
+            <ul>
+               <li><a href="https://www.leadtools.com/support/default.htm">Support</a></li>
+               <li><a href="https://www.leadtools.com/resources/weborder.htm">Products</a></li>
+            </ul>
+         </div>
+         <div id="footerCopyright">Copyright (c) 1991-2022 LEAD Technologies, Inc. All Rights Reserved.</div>
+      </div>
+   </div>
+</body>
+</html>

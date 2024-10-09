@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup Label="Globals"></PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <Platforms>x86;x64</Platforms>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <IsTransformWebConfigDisabled>true</IsTransformWebConfigDisabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DocumentationFile>wwwroot\DocumentService.xml</DocumentationFile>
+    <NoWarn>1701;1702;1705;1591</NoWarn>
+    <PlatformTarget>x64</PlatformTarget>
+    <DefineConstants>DEBUG;TRACE;FOR_NUGET;LT_MP;LTV22_CONFIG;LEADTOOLS_V21_OR_LATER;LEADTOOLS_V22_OR_LATER</DefineConstants>
+    <LeadConfigPath>..\..\..\..\..\Bin\DotNet4\x64\</LeadConfigPath>
+    <RuntimeIdentifier>win7-x64</RuntimeIdentifier>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>true</Optimize>
+    <DocumentationFile>wwwroot\DocumentService.xml</DocumentationFile>
+    <NoWarn>1701;1702;1705;1591</NoWarn>
+    <PlatformTarget>x64</PlatformTarget>
+    <DefineConstants>FOR_NUGET;LT_MP;LTV22_CONFIG;LEADTOOLS_V21_OR_LATER;LEADTOOLS_V22_OR_LATER</DefineConstants>
+    <LeadConfigPath>..\..\..\..\..\Bin\DotNet4\x64\</LeadConfigPath>
+    <RuntimeIdentifier>win7-x64</RuntimeIdentifier>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DocumentationFile>wwwroot\DocumentService.xml</DocumentationFile>
+    <NoWarn>1701;1702;1705;1591</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <DefineConstants>DEBUG;TRACE;FOR_NUGET;LT_MP;LTV22_CONFIG;LEADTOOLS_V21_OR_LATER;LEADTOOLS_V22_OR_LATER</DefineConstants>
+    <LeadConfigPath>..\..\..\..\..\Bin\DotNet4\Win32\</LeadConfigPath>
+    <RuntimeIdentifier>win7-x86</RuntimeIdentifier>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>true</Optimize>
+    <DocumentationFile>wwwroot\DocumentService.xml</DocumentationFile>
+    <NoWarn>1701;1702;1705;1591</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <DefineConstants>FOR_NUGET;LT_MP;LTV22_CONFIG;LEADTOOLS_V21_OR_LATER;LEADTOOLS_V22_OR_LATER</DefineConstants>
+    <LeadConfigPath>..\..\..\..\..\Bin\DotNet4\Win32\</LeadConfigPath>
+    <RuntimeIdentifier>win7-x86</RuntimeIdentifier>
+  </PropertyGroup>
+  <!-- The below target copies all linked files from their link directories to where they should be in the project. This is necessary for our static server.-->
+  <Target Name="CopyLinkedFiles" BeforeTargets="Build">
+    <ItemGroup>
+      <LinkedItem Include="@(Content)" Condition="%(Content.Link) != '' AND %(Extension) != '.dll' And Exists(%(FullPath))" />
+    </ItemGroup>
+    <Copy SourceFiles="@(LinkedItem)" DestinationFiles="%(LinkedItem.Link)" SkipUnchangedFiles="true" />
+  </Target>
+  <ItemGroup>
+    <Compile Remove="wwwroot\cache\**" />
+    <Content Remove="wwwroot\cache\**" />
+    <EmbeddedResource Remove="wwwroot\cache\**" />
+    <None Remove="wwwroot\cache\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="..\src\Resources\Images\favicon.ico" />
+    <_ContentIncludedByDefault Remove="..\src\Resources\Images\LeadtoolsHeader.png" />
+    <_ContentIncludedByDefault Remove="..\src\Resources\Images\loading.GIF" />
+    <_ContentIncludedByDefault Remove="..\src\Resources\Styles\LEADServiceStyles.css" />
+    <_ContentIncludedByDefault Remove="..\src\Resources\development.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\src\Properties\AssemblyInfo.cs" Link="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\src\Controllers\AnnotationsController.cs" Link="Controllers\AnnotationsController.cs" />
+    <Compile Include="..\src\Controllers\AnalyticsController.cs" Link="Controllers\AnalyticsController.cs" />
+    <Compile Include="..\src\Controllers\CacheController.cs" Link="Controllers\CacheController.cs" />
+    <Compile Include="..\src\Controllers\CorsProxyController.cs" Link="Controllers\CorsProxyController.cs" />
+    <Compile Include="..\src\Controllers\MultimediaController.cs" Link="Controllers\MultimediaController.cs" />
+    <Compile Include="..\src\Controllers\DocumentController.cs" Link="Controllers\DocumentController.cs" />
+    <Compile Include="..\src\Controllers\DocumentEditController.cs" Link="Controllers\DocumentEditController.cs" />
+    <Compile Include="..\src\Controllers\FactoryController.cs" Link="Controllers\FactoryController.cs" />
+    <Compile Include="..\src\Controllers\FormFieldsController.cs" Link="Controllers\FormFieldsController.cs" />
+    <Compile Include="..\src\Controllers\CompareController.cs" Link="Controllers\CompareController.cs" />
+    <Compile Include="..\src\Controllers\HomeController.cs" Link="Controllers\HomeController.cs" />
+    <Compile Include="..\src\Controllers\ImagesController.cs" Link="Controllers\ImagesController.cs" />
+    <Compile Include="..\src\Controllers\PageController.cs" Link="Controllers\PageController.cs" />
+    <Compile Include="..\src\Controllers\StatusJobConverterController.cs" Link="Controllers\StatusJobConverterController.cs" />
+    <Compile Include="..\src\Controllers\StructureController.cs" Link="Controllers\StructureController.cs" />
+    <Compile Include="..\src\Controllers\TestController.cs" Link="Controllers\TestController.cs" />
+    <Compile Include="..\src\Models\Base.cs" Link="Models\Base.cs" />
+    <Compile Include="..\src\Models\DocumentModels.cs" Link="Models\DocumentModels.cs" />
+    <Compile Include="..\src\Models\AnalyticsModels.cs" Link="Models\AnalyticsModels.cs" />
+    <Compile Include="..\src\Models\AnnotationsModels.cs" Link="Models\AnnotationsModels.cs" />
+    <Compile Include="..\src\Models\DocumentServiceModelBinder.cs" Link="Models\DocumentServiceModelBinder.cs" />
+    <Compile Include="..\src\Models\DocumentServiceModelBinderProvider.cs" Link="Models\DocumentServiceModelBinderProvider.cs" />
+    <Compile Include="..\src\Models\FactoryModels.cs" Link="Models\FactoryModels.cs" />
+    <Compile Include="..\src\Models\FormFieldsModels.cs" Link="Models\FormFieldsModels.cs" />
+    <Compile Include="..\src\Models\ImagesModels.cs" Link="Models\ImagesModels.cs" />
+    <Compile Include="..\src\Models\PageModels.cs" Link="Models\PageModels.cs" />
+    <Compile Include="..\src\Models\PreCacheModels.cs" Link="Models\PreCacheModels.cs" />
+    <Compile Include="..\src\Models\StatusJobConverterModels.cs" Link="Models\StatusJobConverterModels.cs" />
+    <Compile Include="..\src\Models\StructureModels.cs" Link="Models\StructureModels.cs" />
+    <Compile Include="..\src\Models\CompareModels.cs" Link="Models\CompareModels.cs" />
+    <Compile Include="..\src\Models\TestModels.cs" Link="Models\TestModels.cs" />
+    <Compile Include="..\src\Models\MultimediaModels.cs" Link="Models\MultimediaModels.cs" />
+    <Compile Include="..\src\Tools\Cache\CacheManagerFactory.cs" Link="Tools\Cache\CacheManagerFactory.cs" />
+    <Compile Include="..\src\Tools\Cache\DefaultCacheManager.cs" Link="Tools\Cache\DefaultCacheManager.cs" />
+    <Compile Include="..\src\Tools\Cache\HybridMemoryFileCacheManager.cs" Link="Tools\Cache\HybridMemoryFileCacheManager.cs" />
+    <Compile Include="..\src\Tools\Cache\ICacheManager.cs" Link="Tools\Cache\ICacheManager.cs" />
+    <Compile Include="..\src\Tools\Cache\SerializableMemoryCache.cs" Link="Tools\Cache\SerializableMemoryCache.cs" />
+    <Compile Include="..\src\Tools\DocumentConverterPreferences.cs" Link="Tools\DocumentConverterPreferences.cs" />
+    <Compile Include="..\src\Tools\Exceptions\GlobalExceptionFilter.cs" Link="Tools\Exceptions\GlobalExceptionFilter.cs" />
+    <Compile Include="..\src\Tools\Exceptions\ServiceException.cs" Link="Tools\Exceptions\ServiceException.cs" />
+    <Compile Include="..\src\Tools\Helpers\AlwaysCorsFilter.cs" Link="Tools\Helpers\AlwaysCorsFilter.cs" />
+    <Compile Include="..\src\Tools\Helpers\AnnotationsHelper.cs" Link="Tools\Helpers\AnnotationsHelper.cs" />
+    <Compile Include="..\src\Tools\Helpers\CompareHelper.cs" Link="Tools\Helpers\CompareHelper.cs" />
+    <Compile Include="..\src\Tools\Helpers\ConverterHelper.cs" Link="Tools\Helpers\ConverterHelper.cs" />
+    <Compile Include="..\src\Tools\Helpers\DocumentHelper.cs" Link="Tools\Helpers\DocumentHelper.cs" />
+    <Compile Include="..\src\Tools\Helpers\ImageResizer.cs" Link="Tools\Helpers\ImageResizer.cs" />
+    <Compile Include="..\src\Tools\Helpers\ImageSaver.cs" Link="Tools\Helpers\ImageSaver.cs" />
+    <Compile Include="..\src\Tools\Helpers\PreCacheHelper.cs" Link="Tools\Helpers\PreCacheHelper.cs" />
+    <Compile Include="..\src\Tools\Helpers\SaveImageFormat.cs" Link="Tools\Helpers\SaveImageFormat.cs" />
+    <Compile Include="..\src\Tools\Helpers\ServiceHelper.cs" Link="Tools\Helpers\ServiceHelper.cs" />
+    <Compile Include="..\src\Tools\Helpers\ZipTools.cs" Link="Tools\Helpers\ZipTools.cs" />
+    <Compile Include="..\src\Tools\RequestResponseFilter.cs" Link="Tools\RequestResponseFilter.cs" />
+    <Compile Include="..\..\..\..\Common\DotNet\Demos.cs" Link="Common\Demos.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\src\appsettings.json" Link="appsettings.json" />
+    <Content Include="..\src\index.html" Link="wwwroot\index.html" />
+    <Content Include="..\src\index.js" Link="wwwroot\index.js" />
+    <Content Include="..\src\Resources\development.html" Link="wwwroot\Resources\development.html" />
+    <Content Include="..\src\Resources\Images\favicon.ico" Link="wwwroot\Resources\Images\favicon.ico" />
+    <Content Include="..\src\Resources\Images\LeadtoolsHeader.png" Link="wwwroot\Resources\Images\LeadtoolsHeader.png" />
+    <Content Include="..\src\Resources\Images\loading.GIF" Link="wwwroot\Resources\Images\loading.GIF" />
+    <Content Include="..\src\Resources\Styles\LEADServiceStyles.css" Link="wwwroot\Resources\Styles\LEADServiceStyles.css" />
+    <Content Include="..\src\Samples\1040EZ.pdf" Link="wwwroot\Samples\1040EZ.pdf" />
+    <Content Include="..\src\Samples\barcodes.pdf" Link="wwwroot\Samples\barcodes.pdf" />
+    <Content Include="..\src\Samples\BusinessForm.pdf" Link="wwwroot\Samples\BusinessForm.pdf" />
+    <Content Include="..\src\Samples\ClientInfoSheet.docx" Link="wwwroot\Samples\ClientInfoSheet.docx" />
+    <Content Include="..\src\Samples\Combined.pdf" Link="wwwroot\Samples\Combined.pdf" />
+    <Content Include="..\src\Samples\compare-modified.pdf" Link="wwwroot\Samples\compare-modified.pdf" />
+    <Content Include="..\src\Samples\compare-original.pdf" Link="wwwroot\Samples\compare-original.pdf" />
+    <Content Include="..\src\Samples\form_2t.pdf" Link="wwwroot\Samples\form_2t.pdf" />
+    <Content Include="..\src\Samples\GeicoInsurance.jpg" Link="wwwroot\Samples\GeicoInsurance.jpg" />
+    <Content Include="..\src\Samples\House1.jpg" Link="wwwroot\Samples\House1.jpg" />
+    <Content Include="..\src\Samples\House2.jpg" Link="wwwroot\Samples\House2.jpg" />
+    <Content Include="..\src\Samples\InteractiveForm.pdf" Link="wwwroot\Samples\InteractiveForm.pdf" />
+    <Content Include="..\src\Samples\Leadtools.pdf" Link="wwwroot\Samples\Leadtools.pdf" />
+    <Content Include="..\src\Samples\Marketing.mp4" Link="wwwroot\Samples\Marketing.mp4" />
+    <Content Include="..\src\Samples\MedicareCard.png" Link="wwwroot\Samples\MedicareCard.png" />
+    <Content Include="..\src\Samples\NewHome.pdf" Link="wwwroot\Samples\NewHome.pdf" />
+    <Content Include="..\src\Samples\ocr1-4.tif" Link="wwwroot\Samples\ocr1-4.tif" />
+    <Content Include="..\src\Samples\PortfolioStatement.pdf" Link="wwwroot\Samples\PortfolioStatement.pdf" />
+    <Content Include="..\src\Samples\W2.pdf" Link="wwwroot\Samples\W2.pdf" />
+    <Content Include="..\src\Samples\W4.pdf" Link="wwwroot\Samples\W4.pdf" />
+    <Content Include="..\src\Samples\W9.pdf" Link="wwwroot\Samples\W9.pdf" />
+    <Content Include="..\src\Samples\RentalLeaseAgreement.pdf" Link="wwwroot\Samples\RentalLeaseAgreement.pdf" />
+    <Content Include="config-filecache.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config-default-cache-manager.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config-hybrid-memory-file-cache-manager.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\src\Rules\1040EZ.json" Link="wwwroot\Rules\1040EZ.json" />
+    <Content Include="..\src\Rules\ClientInfoSheet.json" Link="wwwroot\Rules\ClientInfoSheet.json" />
+    <Content Include="..\src\Rules\ClientInfoSheet-CollectContactInfo.json" Link="wwwroot\Rules\ClientInfoSheet-CollectContactInfo.json" />
+    <Content Include="..\src\Rules\ClientInfoSheet-CollectContactInfoWithExclusions.json" Link="wwwroot\Rules\ClientInfoSheet-CollectContactInfoWithExclusions.json" />
+    <Content Include="..\src\Rules\ClientInfoSheet-SloppyNumberWithRedact.json" Link="wwwroot\Rules\ClientInfoSheet-SloppyNumberWithRedact.json" />
+    <Content Include="..\src\Rules\GeicoInsurance.json" Link="wwwroot\Rules\GeicoInsurance.json" />
+    <Content Include="..\src\Rules\GenericTaxDocument.json" Link="wwwroot\Rules\GenericTaxDocument.json" />
+    <Content Include="..\src\Rules\MedicareCard.json" Link="wwwroot\Rules\MedicareCard.json" />
+    <Content Include="..\src\Rules\PortfolioStatement.json" Link="wwwroot\Rules\PortfolioStatement.json" />
+    <Content Include="..\src\Rules\W2.json" Link="wwwroot\Rules\W2.json" />
+    <Content Include="..\src\Rules\W4.json" Link="wwwroot\Rules\W4.json" />
+    <Content Include="..\src\Rules\W9.json" Link="wwwroot\Rules\W9.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Leadtools.Annotations" Version="22.*" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Leadtools.Document.Sdk" Version="22.*" />
+    <PackageReference Include="Leadtools.Formats.Raster.Additional" Version="22.*" />
+    <PackageReference Include="Leadtools.Annotations.WinForms" Version="22.*" />
+    <PackageReference Include="Leadtools.Jpeg2000" Version="22.*" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.HttpsPolicy" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Formatters.Xml" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.WebApiCompatShim" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0-preview.2.21154.6" />
+    <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="System.IO.Packaging" Version="4.4.1" />
+  </ItemGroup>
+</Project>

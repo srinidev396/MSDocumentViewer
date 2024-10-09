@@ -1,0 +1,19 @@
+<!-- List of files that are not referenced directly by the project but are required to be in the bin folder -->
+<!-- These includes file filters and other .NET assemblies that are loaded at runtime -->
+<!-- You can add or remove any of these files if not required by your deployment -->
+<Project DefaultTargets = "Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
+   <ItemGroup>      
+      <None Include="$(LeadConfigPath)libcrypto-1_1.dll" Visible="false" Condition="Exists('$(LeadConfigPath)libcrypto-1_1.dll')" >
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)libssl-1_1.dll" Visible="false" Condition="Exists('$(LeadConfigPath)libssl-1_1.dll')" >
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)libcrypto-1_1-x64.dll" Visible="false" Condition="Exists('$(LeadConfigPath)libcrypto-1_1-x64.dll')" >
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)libssl-1_1-x64.dll" Visible="false" Condition="Exists('$(LeadConfigPath)libssl-1_1-x64.dll')" >
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+   </ItemGroup>
+</Project>

@@ -1,0 +1,717 @@
+{
+  "$type": "DocumentComposite",
+  "title": "LEADTOOLS Document Analyzer",
+  "elementset": [
+    {
+      "$type": "UnstructuredElementSet",
+      "feature": "unstructured",
+      "name": "g_NAME",
+      "version": "1.0",
+      "element": {
+        "$type": "GroupElement",
+        "elements": [
+          {
+            "$type": "GroupElement",
+            "elements": [
+              {
+                "$type": "RegexInspectorElement",
+                "includeWholeWord": false,
+                "prefixFiltering": [],
+                "postfixFiltering": [],
+                "supportBlockTextInRegexElement": true,
+                "includeWholeLine": false,
+                "matchingValueHasSameCharactersHeights": false,
+                "multipleLinesOption": {
+                  "$type": "MultipleLinesOptions",
+                  "multipleLinesMatching": false,
+                  "maximumLines": 2147483647,
+                  "leftAlignedLines": false
+                },
+                "regexParameters": [
+                  {
+                    "$type": "RegexParameters",
+                    "pattern": "Name",
+                    "patternIsOEM": false,
+                    "ignoreSpaces": false,
+                    "ignoreCase": true,
+                    "approximateRegexMode": "DISABLED",
+                    "useLettersToNumbersMapping": false,
+                    "allowSubWordsMatching": true,
+                    "minimumLength": 1,
+                    "minimumCharacterLength": 1,
+                    "minimumDigitsCount": 0,
+                    "minimumLettersCount": 0,
+                    "maximumCost": 0,
+                    "ignoreLargeSpacesBetweenChars": false
+                  }
+                ],
+                "inputVariableIds": [],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Name_label"
+              },
+              {
+                "$type": "RelativeLocationElement",
+                "relativeLocationParameters": [
+                  {
+                    "$type": "RelativeLocationParameter",
+                    "location": "BELOW",
+                    "searchWindowSize": {
+                      "$type": "SearchWindowSize",
+                      "windowSize": 1,
+                      "gapWindowSize": 2,
+                      "sizeUnit": "TEXT_LINES",
+                      "outputUnit": "NONE",
+                      "skipedLines": []
+                    }
+                  }
+                ],
+                "inputVariableIds": [
+                  "Name_label"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Name_location"
+              },
+              {
+                "$type": "RegexInspectorElement",
+                "includeWholeWord": true,
+                "prefixFiltering": [],
+                "postfixFiltering": [],
+                "supportBlockTextInRegexElement": true,
+                "includeWholeLine": false,
+                "matchingValueHasSameCharactersHeights": false,
+                "multipleLinesOption": {
+                  "$type": "MultipleLinesOptions",
+                  "multipleLinesMatching": false,
+                  "maximumLines": 2147483647,
+                  "leftAlignedLines": false
+                },
+                "regexParameters": [
+                  {
+                    "$type": "RegexParameters",
+                    "pattern": ".*",
+                    "patternIsOEM": false,
+                    "ignoreSpaces": false,
+                    "ignoreCase": true,
+                    "approximateRegexMode": "AUTO",
+                    "useLettersToNumbersMapping": false,
+                    "allowSubWordsMatching": true,
+                    "minimumLength": 1,
+                    "minimumCharacterLength": 1,
+                    "minimumDigitsCount": 0,
+                    "minimumLettersCount": 0,
+                    "maximumCost": -1,
+                    "ignoreLargeSpacesBetweenChars": false
+                  }
+                ],
+                "inputVariableIds": [
+                  "Name_location"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Name_value"
+              }
+            ],
+            "logicalOperationElement": null,
+            "inputVariableIds": [],
+            "functions": [],
+            "settings": {
+              "$type": "SettingsManager",
+              "settings": {
+                "REPORT_IN_ELEMENT_RESULT": "false",
+                "NAME": "group_Name"
+              }
+            },
+            "id": "group_NAME"
+          },
+          {
+            "$type": "GroupElement",
+            "elements": [
+              {
+                "$type": "RegexInspectorElement",
+                "includeWholeWord": false,
+                "prefixFiltering": [],
+                "postfixFiltering": [],
+                "supportBlockTextInRegexElement": true,
+                "includeWholeLine": false,
+                "matchingValueHasSameCharactersHeights": false,
+                "multipleLinesOption": {
+                  "$type": "MultipleLinesOptions",
+                  "multipleLinesMatching": false,
+                  "maximumLines": 2147483647,
+                  "leftAlignedLines": false
+                },
+                "regexParameters": [
+                  {
+                    "$type": "RegexParameters",
+                    "pattern": "Medicare Number",
+                    "patternIsOEM": false,
+                    "ignoreSpaces": false,
+                    "ignoreCase": true,
+                    "approximateRegexMode": "DISABLED",
+                    "useLettersToNumbersMapping": false,
+                    "allowSubWordsMatching": true,
+                    "minimumLength": 1,
+                    "minimumCharacterLength": 1,
+                    "minimumDigitsCount": 0,
+                    "minimumLettersCount": 0,
+                    "maximumCost": 0,
+                    "ignoreLargeSpacesBetweenChars": false
+                  }
+                ],
+                "inputVariableIds": [],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Medicare Number_label"
+              },
+              {
+                "$type": "RelativeLocationElement",
+                "relativeLocationParameters": [
+                  {
+                    "$type": "RelativeLocationParameter",
+                    "location": "BELOW",
+                    "searchWindowSize": {
+                      "$type": "SearchWindowSize",
+                      "windowSize": 1,
+                      "gapWindowSize": 2,
+                      "sizeUnit": "TEXT_LINES",
+                      "outputUnit": "NONE",
+                      "skipedLines": []
+                    }
+                  }
+                ],
+                "inputVariableIds": [
+                  "Medicare Number_label"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Medicare Number_location"
+              },
+              {
+                "$type": "RegexInspectorElement",
+                "includeWholeWord": true,
+                "prefixFiltering": [],
+                "postfixFiltering": [],
+                "supportBlockTextInRegexElement": true,
+                "includeWholeLine": false,
+                "matchingValueHasSameCharactersHeights": false,
+                "multipleLinesOption": {
+                  "$type": "MultipleLinesOptions",
+                  "multipleLinesMatching": false,
+                  "maximumLines": 2147483647,
+                  "leftAlignedLines": false
+                },
+                "regexParameters": [
+                  {
+                    "$type": "RegexParameters",
+                    "pattern": "[0-9A-Z]{4}-[0-9A-Z]{3}-[0-9A-Z]{4}",
+                    "patternIsOEM": false,
+                    "ignoreSpaces": true,
+                    "ignoreCase": true,
+                    "approximateRegexMode": "AUTO",
+                    "useLettersToNumbersMapping": false,
+                    "allowSubWordsMatching": true,
+                    "minimumLength": 1,
+                    "minimumCharacterLength": 1,
+                    "minimumDigitsCount": 0,
+                    "minimumLettersCount": 0,
+                    "maximumCost": -1,
+                    "ignoreLargeSpacesBetweenChars": false
+                  }
+                ],
+                "inputVariableIds": [
+                  "Medicare Number_location"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Medicare Number_value"
+              }
+            ],
+            "logicalOperationElement": null,
+            "inputVariableIds": [],
+            "functions": [],
+            "settings": {
+              "$type": "SettingsManager",
+              "settings": {
+                "REPORT_IN_ELEMENT_RESULT": "false",
+                "NAME": "group_Medicare Number"
+              }
+            },
+            "id": "group_MEDICARE NUMBER"
+          },
+          {
+            "$type": "GroupElement",
+            "elements": [
+              {
+                "$type": "RegexInspectorElement",
+                "includeWholeWord": false,
+                "prefixFiltering": [],
+                "postfixFiltering": [],
+                "supportBlockTextInRegexElement": true,
+                "includeWholeLine": false,
+                "matchingValueHasSameCharactersHeights": false,
+                "multipleLinesOption": {
+                  "$type": "MultipleLinesOptions",
+                  "multipleLinesMatching": false,
+                  "maximumLines": 2147483647,
+                  "leftAlignedLines": false
+                },
+                "regexParameters": [
+                  {
+                    "$type": "RegexParameters",
+                    "pattern": "Coverage starts",
+                    "patternIsOEM": false,
+                    "ignoreSpaces": false,
+                    "ignoreCase": true,
+                    "approximateRegexMode": "DISABLED",
+                    "useLettersToNumbersMapping": false,
+                    "allowSubWordsMatching": true,
+                    "minimumLength": 1,
+                    "minimumCharacterLength": 1,
+                    "minimumDigitsCount": 0,
+                    "minimumLettersCount": 0,
+                    "maximumCost": 0,
+                    "ignoreLargeSpacesBetweenChars": false
+                  }
+                ],
+                "inputVariableIds": [],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Date_label"
+              },
+              {
+                "$type": "RelativeLocationElement",
+                "relativeLocationParameters": [
+                  {
+                    "$type": "RelativeLocationParameter",
+                    "location": "BELOW",
+                    "searchWindowSize": {
+                      "$type": "SearchWindowSize",
+                      "windowSize": 1,
+                      "gapWindowSize": 2,
+                      "sizeUnit": "TEXT_LINES",
+                      "outputUnit": "NONE",
+                      "skipedLines": []
+                    }
+                  }
+                ],
+                "inputVariableIds": [
+                  "Date_label"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Date_location"
+              },
+              {
+                "$type": "RegexInspectorElement",
+                "includeWholeWord": false,
+                "prefixFiltering": [],
+                "postfixFiltering": [],
+                "supportBlockTextInRegexElement": true,
+                "includeWholeLine": false,
+                "matchingValueHasSameCharactersHeights": false,
+                "multipleLinesOption": {
+                  "$type": "MultipleLinesOptions",
+                  "multipleLinesMatching": true,
+                  "maximumLines": 2147483647,
+                  "leftAlignedLines": false
+                },
+                "regexParameters": [
+                  {
+                    "$type": "RegexParameters",
+                    "pattern": "value:Date",
+                    "patternIsOEM": true,
+                    "ignoreSpaces": false,
+                    "ignoreCase": true,
+                    "approximateRegexMode": "AUTO",
+                    "useLettersToNumbersMapping": false,
+                    "allowSubWordsMatching": true,
+                    "minimumLength": 1,
+                    "minimumCharacterLength": 1,
+                    "minimumDigitsCount": 0,
+                    "minimumLettersCount": 0,
+                    "maximumCost": -1,
+                    "ignoreLargeSpacesBetweenChars": false
+                  }
+                ],
+                "inputVariableIds": [
+                  "Date_location"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Date_value"
+              }
+            ],
+            "logicalOperationElement": null,
+            "inputVariableIds": [],
+            "functions": [],
+            "settings": {
+              "$type": "SettingsManager",
+              "settings": {
+                "REPORT_IN_ELEMENT_RESULT": "false",
+                "NAME": "group_Date"
+              }
+            },
+            "id": "group_DATE"
+          },
+          {
+            "$type": "GroupElement",
+            "elements": [
+              {
+                "$type": "RegexInspectorElement",
+                "includeWholeWord": false,
+                "prefixFiltering": [],
+                "postfixFiltering": [],
+                "supportBlockTextInRegexElement": true,
+                "includeWholeLine": false,
+                "matchingValueHasSameCharactersHeights": false,
+                "multipleLinesOption": {
+                  "$type": "MultipleLinesOptions",
+                  "multipleLinesMatching": false,
+                  "maximumLines": 2147483647,
+                  "leftAlignedLines": false
+                },
+                "regexParameters": [
+                  {
+                    "$type": "RegexParameters",
+                    "pattern": "Coverage Starts",
+                    "patternIsOEM": false,
+                    "ignoreSpaces": false,
+                    "ignoreCase": true,
+                    "approximateRegexMode": "DISABLED",
+                    "useLettersToNumbersMapping": false,
+                    "allowSubWordsMatching": true,
+                    "minimumLength": 1,
+                    "minimumCharacterLength": 1,
+                    "minimumDigitsCount": 0,
+                    "minimumLettersCount": 0,
+                    "maximumCost": 0,
+                    "ignoreLargeSpacesBetweenChars": false
+                  }
+                ],
+                "inputVariableIds": [],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Coverage Starts_label"
+              },
+              {
+                "$type": "RelativeLocationElement",
+                "relativeLocationParameters": [
+                  {
+                    "$type": "RelativeLocationParameter",
+                    "location": "BELOW",
+                    "searchWindowSize": {
+                      "$type": "SearchWindowSize",
+                      "windowSize": 1,
+                      "gapWindowSize": 2,
+                      "sizeUnit": "TEXT_LINES",
+                      "outputUnit": "NONE",
+                      "skipedLines": []
+                    }
+                  }
+                ],
+                "inputVariableIds": [
+                  "Coverage Starts_label"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Coverage Starts_location"
+              },
+              {
+                "$type": "RegexInspectorElement",
+                "includeWholeWord": true,
+                "prefixFiltering": [],
+                "postfixFiltering": [],
+                "supportBlockTextInRegexElement": true,
+                "includeWholeLine": false,
+                "matchingValueHasSameCharactersHeights": false,
+                "multipleLinesOption": {
+                  "$type": "MultipleLinesOptions",
+                  "multipleLinesMatching": true,
+                  "maximumLines": 2147483647,
+                  "leftAlignedLines": false
+                },
+                "regexParameters": [
+                  {
+                    "$type": "RegexParameters",
+                    "pattern": "\\d{1,}",
+                    "patternIsOEM": false,
+                    "ignoreSpaces": false,
+                    "ignoreCase": true,
+                    "approximateRegexMode": "AUTO",
+                    "useLettersToNumbersMapping": false,
+                    "allowSubWordsMatching": true,
+                    "minimumLength": 1,
+                    "minimumCharacterLength": 1,
+                    "minimumDigitsCount": 0,
+                    "minimumLettersCount": 0,
+                    "maximumCost": -1,
+                    "ignoreLargeSpacesBetweenChars": false
+                  }
+                ],
+                "inputVariableIds": [
+                  "Coverage Starts_location"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Coverage Starts_value"
+              },
+              {
+                "$type": "SearchElement",
+                "outputResultType": "",
+                "approximateRegexMode": "AUTO",
+                "multipleLinesSearch": true,
+                "inputVariableIds": [
+                  "Coverage Starts_value"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Coverage Starts_search"
+              }
+            ],
+            "logicalOperationElement": null,
+            "inputVariableIds": [],
+            "functions": [],
+            "settings": {
+              "$type": "SettingsManager",
+              "settings": {
+                "REPORT_IN_ELEMENT_RESULT": "false",
+                "NAME": "group_Coverage Starts"
+              }
+            },
+            "id": "group_COVERAGE STARTS"
+          },
+          {
+            "$type": "GroupElement",
+            "elements": [
+              {
+                "$type": "RegexInspectorElement",
+                "includeWholeWord": false,
+                "prefixFiltering": [],
+                "postfixFiltering": [],
+                "supportBlockTextInRegexElement": true,
+                "includeWholeLine": false,
+                "matchingValueHasSameCharactersHeights": false,
+                "multipleLinesOption": {
+                  "$type": "MultipleLinesOptions",
+                  "multipleLinesMatching": false,
+                  "maximumLines": 2147483647,
+                  "leftAlignedLines": false
+                },
+                "regexParameters": [
+                  {
+                    "$type": "RegexParameters",
+                    "pattern": "Entitled to",
+                    "patternIsOEM": false,
+                    "ignoreSpaces": false,
+                    "ignoreCase": true,
+                    "approximateRegexMode": "DISABLED",
+                    "useLettersToNumbersMapping": false,
+                    "allowSubWordsMatching": true,
+                    "minimumLength": 1,
+                    "minimumCharacterLength": 1,
+                    "minimumDigitsCount": 0,
+                    "minimumLettersCount": 0,
+                    "maximumCost": 0,
+                    "ignoreLargeSpacesBetweenChars": false
+                  }
+                ],
+                "inputVariableIds": [],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Entitled to_label"
+              },
+              {
+                "$type": "RelativeLocationElement",
+                "relativeLocationParameters": [
+                  {
+                    "$type": "RelativeLocationParameter",
+                    "location": "BELOW",
+                    "searchWindowSize": {
+                      "$type": "SearchWindowSize",
+                      "windowSize": 1,
+                      "gapWindowSize": 2,
+                      "sizeUnit": "TEXT_LINES",
+                      "outputUnit": "NONE",
+                      "skipedLines": []
+                    }
+                  }
+                ],
+                "inputVariableIds": [
+                  "Entitled to_label"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Entitled to_location"
+              },
+              {
+                "$type": "RegexInspectorElement",
+                "includeWholeWord": true,
+                "prefixFiltering": [],
+                "postfixFiltering": [],
+                "supportBlockTextInRegexElement": true,
+                "includeWholeLine": false,
+                "matchingValueHasSameCharactersHeights": false,
+                "multipleLinesOption": {
+                  "$type": "MultipleLinesOptions",
+                  "multipleLinesMatching": true,
+                  "maximumLines": 2147483647,
+                  "leftAlignedLines": false
+                },
+                "regexParameters": [
+                  {
+                    "$type": "RegexParameters",
+                    "pattern": "[a-zA-Z]+\\s\\([a-zA-Z]+\\s[a-zA-Z]\\)",
+                    "patternIsOEM": false,
+                    "ignoreSpaces": false,
+                    "ignoreCase": true,
+                    "approximateRegexMode": "AUTO",
+                    "useLettersToNumbersMapping": false,
+                    "allowSubWordsMatching": true,
+                    "minimumLength": 1,
+                    "minimumCharacterLength": 1,
+                    "minimumDigitsCount": 0,
+                    "minimumLettersCount": 0,
+                    "maximumCost": -1,
+                    "ignoreLargeSpacesBetweenChars": false
+                  }
+                ],
+                "inputVariableIds": [
+                  "Entitled to_location"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Entitled to_value"
+              }
+            ],
+            "logicalOperationElement": null,
+            "inputVariableIds": [],
+            "functions": [],
+            "settings": {
+              "$type": "SettingsManager",
+              "settings": {
+                "REPORT_IN_ELEMENT_RESULT": "false",
+                "NAME": "group_Entitled to"
+              }
+            },
+            "id": "group_ENTITLED TO"
+          },
+          {
+            "$type": "LogicalOperationElement",
+            "logicalOperationType": "OR",
+            "inputVariableIds": [
+              "group_NAME",
+              "group_MEDICARE NUMBER",
+              "group_DATE",
+              "group_COVERAGE STARTS",
+              "group_ENTITLED TO"
+            ],
+            "functions": [],
+            "settings": {
+              "$type": "SettingsManager",
+              "settings": {
+                "REPORT_IN_ELEMENT_RESULT": "false"
+              }
+            },
+            "id": "Name_combined"
+          }
+        ],
+        "logicalOperationElement": null,
+        "inputVariableIds": [],
+        "functions": [],
+        "settings": {
+          "$type": "SettingsManager",
+          "settings": {
+            "REPORT_IN_ELEMENT_RESULT": "true",
+            "NAME": "g_Name",
+            "LANGUAGE": "en"
+          }
+        },
+        "id": "g_NAME"
+      }
+    }
+  ],
+  "actions": null,
+  "meta": "[{\"ResourceType\":\"DataModel\",\"ImplVersion\":\"1.0\",\"InstanceType\":\"CustomFeature\",\"Location\":\"Leadtools.Document.Unstructured.Highlevel\",\"Instance\":{\"Label\":[{\"Name\":null,\"Value\":{\"Name\":null,\"Pattern\":\"Name\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"DISABLED\"},\"TweaksForResults\":{\"IncludeWholeWord\":false,\"IncludeWholeLine\":false}},\"Where\":\"LINE_BELOW\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"MaxGapBetweenLinesLB\":2,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false}],\"Value\":[{\"Name\":null,\"Pattern\":\".*\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"AUTO\"},\"TweaksForResults\":{\"IncludeWholeWord\":true,\"IncludeWholeLine\":false}}],\"HasLabel\":true,\"HasValues\":true,\"Name\":\"Name\",\"Excluded\":false,\"Excluding\":[],\"Functions\":[]}},{\"ResourceType\":\"DataModel\",\"ImplVersion\":\"1.0\",\"InstanceType\":\"CustomFeature\",\"Location\":\"Leadtools.Document.Unstructured.Highlevel\",\"Instance\":{\"Label\":[{\"Name\":null,\"Value\":{\"Name\":null,\"Pattern\":\"Medicare Number\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"DISABLED\"},\"TweaksForResults\":{\"IncludeWholeWord\":false,\"IncludeWholeLine\":false}},\"Where\":\"LINE_BELOW\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"MaxGapBetweenLinesLB\":2,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false}],\"Value\":[{\"Name\":null,\"Pattern\":\"[0-9A-Z]{4}-[0-9A-Z]{3}-[0-9A-Z]{4}\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":true,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"AUTO\"},\"TweaksForResults\":{\"IncludeWholeWord\":true,\"IncludeWholeLine\":false}}],\"HasLabel\":true,\"HasValues\":true,\"Name\":\"Medicare Number\",\"Excluded\":false,\"Excluding\":[],\"Functions\":[]}},{\"ResourceType\":\"DataModel\",\"ImplVersion\":\"1.0\",\"InstanceType\":\"StandardFeature\",\"Location\":\"Leadtools.Document.Unstructured.Highlevel\",\"Instance\":{\"LabelName\":\"\",\"LabelOptions\":{\"Name\":null,\"Value\":null,\"Where\":\"RIGHT\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"MaxGapBetweenLinesLB\":2,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false},\"LabelCanSpanLines\":false,\"CustomLabel\":true,\"ValueName\":\"Date\",\"ValueCanSpanLines\":true,\"CustomValue\":false,\"CustomLabels\":[{\"Name\":null,\"Value\":{\"Name\":null,\"Pattern\":\"Coverage starts\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"DISABLED\"},\"TweaksForResults\":{\"IncludeWholeWord\":false,\"IncludeWholeLine\":false}},\"Where\":\"LINE_BELOW\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"MaxGapBetweenLinesLB\":2,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false}],\"CustomValues\":[],\"HasCustomLabel\":true,\"HasCustomValue\":false,\"Name\":\"Date\",\"Excluded\":false,\"Excluding\":[],\"Functions\":[]}},{\"ResourceType\":\"DataModel\",\"ImplVersion\":\"1.0\",\"InstanceType\":\"CustomFeature\",\"Location\":\"Leadtools.Document.Unstructured.Highlevel\",\"Instance\":{\"Label\":[{\"Name\":null,\"Value\":{\"Name\":null,\"Pattern\":\"Coverage Starts\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"DISABLED\"},\"TweaksForResults\":{\"IncludeWholeWord\":false,\"IncludeWholeLine\":false}},\"Where\":\"LINE_BELOW\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"MaxGapBetweenLinesLB\":2,\"FindAllOccurrences\":true,\"LettersToNumbersForOccurrences\":false}],\"Value\":[{\"Name\":null,\"Pattern\":\"\\\\d{1,}\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":true,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"AUTO\"},\"TweaksForResults\":{\"IncludeWholeWord\":true,\"IncludeWholeLine\":false}}],\"HasLabel\":true,\"HasValues\":true,\"Name\":\"Coverage Starts\",\"Excluded\":false,\"Excluding\":[],\"Functions\":[]}},{\"ResourceType\":\"DataModel\",\"ImplVersion\":\"1.0\",\"InstanceType\":\"CustomFeature\",\"Location\":\"Leadtools.Document.Unstructured.Highlevel\",\"Instance\":{\"Label\":[{\"Name\":null,\"Value\":{\"Name\":null,\"Pattern\":\"Entitled to\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"DISABLED\"},\"TweaksForResults\":{\"IncludeWholeWord\":false,\"IncludeWholeLine\":false}},\"Where\":\"LINE_BELOW\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"MaxGapBetweenLinesLB\":2,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false}],\"Value\":[{\"Name\":null,\"Pattern\":\"[a-zA-Z]+\\\\s\\\\([a-zA-Z]+\\\\s[a-zA-Z]\\\\)\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":true,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"AUTO\"},\"TweaksForResults\":{\"IncludeWholeWord\":true,\"IncludeWholeLine\":false}}],\"HasLabel\":true,\"HasValues\":true,\"Name\":\"Entitled to\",\"Excluded\":false,\"Excluding\":[],\"Functions\":[]}}]"
+}

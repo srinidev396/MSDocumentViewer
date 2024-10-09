@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+    <PropertyGroup Label="Globals"></PropertyGroup>
+    <PropertyGroup>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <Platforms>AnyCPU;x64</Platforms>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <AssemblyName>DocumentService</AssemblyName>
+        <RootNamespace>DocumentService</RootNamespace>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+        <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
+        <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+        <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+        <EnableDefaultContentItems>false</EnableDefaultContentItems>
+        <EnableDefaultItems>false</EnableDefaultItems>
+        <EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
+        <NoWarn>$(NoWarn);SYSLIB0011</NoWarn>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DocumentationFile>wwwroot\DocumentService.xml</DocumentationFile>
+        <NoWarn>NU1701;1701;1702;1705;1591</NoWarn>
+        <PlatformTarget>x64</PlatformTarget>
+        <DefineConstants>DEBUG;TRACE;STD;FOR_NUGET;FOR_STD;LT_MP;LTV22_CONFIG;LEADTOOLS_V21_OR_LATER;LEADTOOLS_V22_OR_LATER</DefineConstants>
+        <NoWarn>$(NoWarn);SYSLIB0011</NoWarn>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <DocumentationFile>wwwroot\DocumentService.xml</DocumentationFile>
+        <NoWarn>NU1701;1701;1702;1705;1591</NoWarn>
+        <PlatformTarget>x64</PlatformTarget>
+        <DefineConstants>TRACE;FOR_STD;STD;FOR_NUGET;LT_MP;LTV22_CONFIG;LEADTOOLS_V21_OR_LATER;LEADTOOLS_V22_OR_LATER</DefineConstants>
+        <NoWarn>$(NoWarn);SYSLIB0011</NoWarn>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+        <DocumentationFile>wwwroot\DocumentService.xml</DocumentationFile>
+        <NoWarn>NU1701;1701;1702;1705;1591</NoWarn>
+        <PlatformTarget>x64</PlatformTarget>
+        <DefineConstants>DEBUG;TRACE;STD;FOR_STD;FOR_NUGET;LT_MP;LTV22_CONFIG;LEADTOOLS_V21_OR_LATER;LEADTOOLS_V22_OR_LATER</DefineConstants>
+        <NoWarn>$(NoWarn);SYSLIB0011</NoWarn>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+        <DocumentationFile>wwwroot\DocumentService.xml</DocumentationFile>
+        <NoWarn>NU1701;1701;1702;1705;1591</NoWarn>
+        <PlatformTarget>x64</PlatformTarget>
+        <DefineConstants>TRACE;FOR_STD;STD;FOR_NUGET;LT_MP;LTV22_CONFIG;LEADTOOLS_V21_OR_LATER;LEADTOOLS_V22_OR_LATER</DefineConstants>
+        <NoWarn>$(NoWarn);SYSLIB0011</NoWarn>
+    </PropertyGroup>
+    <ItemGroup>
+        <_ContentIncludedByDefault Remove="..\src\Resources\Images\favicon.ico" />
+        <_ContentIncludedByDefault Remove="..\src\Resources\Images\LeadtoolsHeader.png" />
+        <_ContentIncludedByDefault Remove="..\src\Resources\Images\loading.GIF" />
+        <_ContentIncludedByDefault Remove="..\src\Resources\Styles\LEADServiceStyles.css" />
+        <_ContentIncludedByDefault Remove="..\src\Resources\development.html" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="..\src\Properties\AssemblyInfo.cs" Link="Properties\AssemblyInfo.cs" />
+        <Compile Include="..\src\Controllers\AnnotationsController.cs" Link="Controllers\AnnotationsController.cs" />
+        <Compile Include="..\src\Controllers\AnalyticsController.cs" Link="Controllers\AnalyticsController.cs" />
+        <Compile Include="..\src\Controllers\CacheController.cs" Link="Controllers\CacheController.cs" />
+        <Compile Include="..\src\Controllers\CorsProxyController.cs" Link="Controllers\CorsProxyController.cs" />
+        <Compile Include="..\src\Controllers\MultimediaController.cs" Link="Controllers\MultimediaController.cs" />
+        <Compile Include="..\src\Controllers\DocumentController.cs" Link="Controllers\DocumentController.cs" />
+        <Compile Include="..\src\Controllers\DocumentEditController.cs" Link="Controllers\DocumentEditController.cs" />
+        <Compile Include="..\src\Controllers\FactoryController.cs" Link="Controllers\FactoryController.cs" />
+        <Compile Include="..\src\Controllers\FormFieldsController.cs" Link="Controllers\FormFieldsController.cs" />
+        <Compile Include="..\src\Controllers\CompareController.cs" Link="Controllers\CompareController.cs" />
+        <Compile Include="..\src\Controllers\HomeController.cs" Link="Controllers\HomeController.cs" />
+        <Compile Include="..\src\Controllers\ImagesController.cs" Link="Controllers\ImagesController.cs" />
+        <Compile Include="..\src\Controllers\PageController.cs" Link="Controllers\PageController.cs" />
+        <Compile Include="..\src\Controllers\SharePointController.cs" Link="Controllers\SharePointController.cs" />
+        <Compile Include="..\src\Controllers\StatusJobConverterController.cs" Link="Controllers\StatusJobConverterController.cs" />
+        <Compile Include="..\src\Controllers\StructureController.cs" Link="Controllers\StructureController.cs" />
+        <Compile Include="..\src\Controllers\TestController.cs" Link="Controllers\TestController.cs" />
+        <Compile Include="..\src\Controllers\FusionController.cs" Link="Controllers\FusionController.cs" />
+        <Compile Include="..\src\Controllers\OcrController.cs" Link="Controllers\OcrController.cs" />
+        
+        <Compile Include="..\src\Models\Base.cs" Link="Models\Base.cs" />
+        <Compile Include="..\src\Models\DocumentModels.cs" Link="Models\DocumentModels.cs" />
+        <Compile Include="..\src\Models\AnalyticsModels.cs" Link="Models\AnalyticsModels.cs" />
+        <Compile Include="..\src\Models\AnnotationsModels.cs" Link="Models\AnnotationsModels.cs" />
+        <Compile Include="..\src\Models\DocumentServiceModelBinder.cs" Link="Models\DocumentServiceModelBinder.cs" />
+        <Compile Include="..\src\Models\DocumentServiceModelBinderProvider.cs" Link="Models\DocumentServiceModelBinderProvider.cs" />
+        <Compile Include="..\src\Models\FactoryModels.cs" Link="Models\FactoryModels.cs" />
+        <Compile Include="..\src\Models\FormFieldsModels.cs" Link="Models\FormFieldsModels.cs" />
+        <Compile Include="..\src\Models\ImagesModels.cs" Link="Models\ImagesModels.cs" />
+        <Compile Include="..\src\Models\PageModels.cs" Link="Models\PageModels.cs" />
+        <Compile Include="..\src\Models\PreCacheModels.cs" Link="Models\PreCacheModels.cs" />
+        <Compile Include="..\src\Models\SharePointModels.cs" Link="Models\SharePointModels.cs" />
+        <Compile Include="..\src\Models\StatusJobConverterModels.cs" Link="Models\StatusJobConverterModels.cs" />
+        <Compile Include="..\src\Models\StructureModels.cs" Link="Models\StructureModels.cs" />
+        <Compile Include="..\src\Models\CompareModels.cs" Link="Models\CompareModels.cs" />
+        <Compile Include="..\src\Models\TestModels.cs" Link="Models\TestModels.cs" />
+        <Compile Include="..\src\Models\MultimediaModels.cs" Link="Models\MultimediaModels.cs" />
+        <Compile Include="..\src\Models\FusionAttachment.cs" Link="Models\FusionAttachment.cs" />
+        <Compile Include="..\src\Tools\Cache\CacheManagerFactory.cs" Link="Tools\Cache\CacheManagerFactory.cs" />
+        <Compile Include="..\src\Tools\Cache\DefaultCacheManager.cs" Link="Tools\Cache\DefaultCacheManager.cs" />
+        <Compile Include="..\src\Tools\Cache\HybridMemoryFileCacheManager.cs" Link="Tools\Cache\HybridMemoryFileCacheManager.cs" />
+        <Compile Include="..\src\Tools\Cache\ICacheManager.cs" Link="Tools\Cache\ICacheManager.cs" />
+        <Compile Include="..\src\Tools\Cache\SerializableMemoryCache.cs" Link="Tools\Cache\SerializableMemoryCache.cs" />
+        <Compile Include="..\src\Tools\DocumentConverterPreferences.cs" Link="Tools\DocumentConverterPreferences.cs" />
+        <Compile Include="..\src\Tools\Exceptions\GlobalExceptionFilter.cs" Link="Tools\Exceptions\GlobalExceptionFilter.cs" />
+        <Compile Include="..\src\Tools\Exceptions\ServiceException.cs" Link="Tools\Exceptions\ServiceException.cs" />
+        <Compile Include="..\src\Tools\Helpers\AlwaysCorsFilter.cs" Link="Tools\Helpers\AlwaysCorsFilter.cs" />
+        <Compile Include="..\src\Tools\Helpers\AnnotationsHelper.cs" Link="Tools\Helpers\AnnotationsHelper.cs" />
+        <Compile Include="..\src\Tools\Helpers\CompareHelper.cs" Link="Tools\Helpers\CompareHelper.cs" />
+        <Compile Include="..\src\Tools\Helpers\ConverterHelper.cs" Link="Tools\Helpers\ConverterHelper.cs" />
+        <Compile Include="..\src\Tools\Helpers\DocumentHelper.cs" Link="Tools\Helpers\DocumentHelper.cs" />
+        <Compile Include="..\src\Tools\Helpers\ImageResizer.cs" Link="Tools\Helpers\ImageResizer.cs" />
+        <Compile Include="..\src\Tools\Helpers\ImageSaver.cs" Link="Tools\Helpers\ImageSaver.cs" />
+        <Compile Include="..\src\Tools\Helpers\PreCacheHelper.cs" Link="Tools\Helpers\PreCacheHelper.cs" />
+        <Compile Include="..\src\Tools\Helpers\SaveImageFormat.cs" Link="Tools\Helpers\SaveImageFormat.cs" />
+        <Compile Include="..\src\Tools\Helpers\ServiceHelper.cs" Link="Tools\Helpers\ServiceHelper.cs" />
+        <Compile Include="..\src\Tools\Helpers\ZipTools.cs" Link="Tools\Helpers\ZipTools.cs" />
+        <Compile Include="..\src\Tools\RequestResponseFilter.cs" Link="Tools\RequestResponseFilter.cs" />
+        <Compile Include="..\src\Tools\Demos.cs" Link="Tools\Demos.cs" />
+        <Compile Include="Program.cs" />
+        <Compile Include="Properties\Resources.Designer.cs" />
+        <Compile Include="Startup.cs" />
+        <Compile Include="TabFusionSecure.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <!--<None Include="..\src\index.html" Link="wwwroot\index.html" />-->
+        <!--<None Include="..\src\index.js" Link="wwwroot\index.js" />-->
+        <!--<None Include="..\src\Samples\LeadtoolsEditor.docx" Link="wwwroot\Samples\LeadtoolsEditor.docx"  CopyToOutputDirectory="PreserveNewest"/>-->
+        <!--<None Include="..\src\Samples\Marketing.ts" Link="wwwroot\Samples\Marketing.ts"  CopyToOutputDirectory="PreserveNewest"/>-->
+        <!--<None Include="..\src\Samples\RXCard.png" Link="wwwroot\Samples\RXCard.png"  CopyToOutputDirectory="PreserveNewest"/>-->
+        <Content Include="appsettings.json" />
+        <Content Include="config-filecache.xml">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="config-default-cache-manager.xml">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="config-hybrid-memory-file-cache-manager.xml">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="config-mmfilecache.xml">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="Resources\Invalid.png" />
+        <Content Include="Resources\NotAvailableLarge.png" />
+        <Content Include="wwwroot\DocumentService.xml" />
+        <Content Include="wwwroot\Resources\development.html" />
+        <Content Include="wwwroot\Resources\Images\favicon.ico" />
+        <Content Include="wwwroot\Resources\Images\LeadtoolsHeader.png" />
+        <Content Include="wwwroot\Resources\Images\loading.GIF" />
+        <Content Include="wwwroot\Resources\Styles\LEADServiceStyles.css" />
+        <Content Include="wwwroot\Rules\1040EZ.json" />
+        <Content Include="wwwroot\Rules\ClientInfoSheet-CollectContactInfo.json" />
+        <Content Include="wwwroot\Rules\ClientInfoSheet-CollectContactInfoWithExclusions.json" />
+        <Content Include="wwwroot\Rules\ClientInfoSheet-SloppyNumberWithRedact.json" />
+        <Content Include="wwwroot\Rules\ClientInfoSheet.json" />
+        <Content Include="wwwroot\Rules\GeicoInsurance.json" />
+        <Content Include="wwwroot\Rules\GenericTaxDocument.json" />
+        <Content Include="wwwroot\Rules\MedicareCard.json" />
+        <Content Include="wwwroot\Rules\PortfolioStatement.json" />
+        <Content Include="wwwroot\Rules\W2.json" />
+        <Content Include="wwwroot\Rules\W4.json" />
+        <Content Include="wwwroot\Rules\W9.json" />
+        <Content Include="wwwroot\Samples\GeicoInsurance.jpg" />
+        <Content Include="wwwroot\Samples\House1.jpg" />
+        <Content Include="wwwroot\Samples\House2.jpg" />
+        <Content Include="wwwroot\Samples\Marketing.mp4" />
+        <Content Include="wwwroot\Samples\MedicareCard.png" />
+        <Content Include="wwwroot\Samples\ocr1-4.tif" />
+        <Content Include="wwwroot\TempFiles\annotation.xml" />
+        <Content Include="wwwroot\TempFiles\test.txt" />
+        <EmbeddedResource Include="Properties\Resources.resx" />
+      <None Include="wwwroot\OcrLEADRuntime\BusinessCard.Names.en.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\BusinessCard.Titles.en.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.af.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.af.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.az.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.be.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.be.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.bg.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.bg.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.Binarize.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.ca.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.ca.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.Cmc7.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.cs.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.cs.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.da.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.da.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.de.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.de.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.el.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.el.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.en.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.en.bin2" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.en.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.es.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.es.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.et.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.et.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.eu.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.fi.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.Field.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.fr.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.fr.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.gl.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.hr.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.hr.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.hu.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.hu.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.icr.en.p1.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.icr.en.p2.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.icr.en.p3.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.icr.en.p4.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.icr.en.p5.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.icr.en.p6.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.icr.en.p7.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.icr.en.p8.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.id.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.id.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.is.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.is.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.it.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.it.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.ja.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.ja.bin2" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.ko.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.ko.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.lt.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.lt.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.lv.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.lv.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.Micr.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.mk.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.mk.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.Mrz.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.ms.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.ms.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.mt.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.mt.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.nl.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.nl.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.no.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.no.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.pl.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.pl.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.pt.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.pt.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.ro.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.ro.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.ru.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.ru.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.sk.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.sk.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.sl.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.sl.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.sq.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.sq.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.sr.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.sr.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.sv.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.sv.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.sw.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.sw.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.te.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.th.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.th.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.tr.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.uk.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.uk.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.vi.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.vi.dic" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.zh-Hans.bin" />
+      <None Include="wwwroot\OcrLEADRuntime\LEAD.zh-Hant.bin" />
+      <None Include="wwwroot\Samples\1040EZ.pdf" />
+      <None Include="wwwroot\Samples\barcodes.pdf" />
+      <None Include="wwwroot\Samples\BusinessForm.pdf" />
+      <None Include="wwwroot\Samples\ClientInfoSheet.docx" />
+      <None Include="wwwroot\Samples\Combined.pdf" />
+      <None Include="wwwroot\Samples\compare-modified.pdf" />
+      <None Include="wwwroot\Samples\compare-original.pdf" />
+      <None Include="wwwroot\Samples\form_2t.pdf" />
+      <None Include="wwwroot\Samples\InteractiveForm.pdf" />
+      <None Include="wwwroot\Samples\Leadtools.pdf" />
+      <None Include="wwwroot\Samples\NewHome.pdf" />
+      <None Include="wwwroot\Samples\PortfolioStatement.pdf" />
+      <None Include="wwwroot\Samples\RentalLeaseAgreement.pdf" />
+      <None Include="wwwroot\Samples\W2.pdf" />
+      <None Include="wwwroot\Samples\W4.pdf" />
+      <None Include="wwwroot\Samples\W9.pdf" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Leadtools.Annotations" Version="22.*" />
+        <PackageReference Include="Leadtools.Annotations.NETStandard" Version="22.*" />
+        <PackageReference Include="Leadtools.Document.Sdk" Version="22.*" />
+        <PackageReference Include="Leadtools.Formats.Raster.Additional" Version="22.*" />
+        <PackageReference Include="Leadtools.Jpeg2000" Version="22.*" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.10" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.WebApiCompatShim" Version="2.2.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+        <PackageReference Include="Microsoft.SharePoint.Client" Version="14.0.4762.1000" />
+        <PackageReference Include="NLog" Version="5.2.8" />
+        <PackageReference Include="NLog.Extensions.Logging" Version="5.3.8" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+        <PackageReference Include="System.Drawing.Common" Version="8.0.3" />
+        <PackageReference Include="System.IO.Packaging" Version="4.4.1" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="wwwroot\cache\" />
+    </ItemGroup>
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+        <ItemGroup>
+            <LinkedItem Include="@(None)" Condition="%(None.Link) != '' And Exists(%(FullPath)) " />
+            <!--AND %(Extension) != '.exe'-->
+        </ItemGroup>
+        <Copy SourceFiles="@(LinkedItem)" DestinationFiles="%(LinkedItem.Link)" SkipUnchangedFiles="true" />
+        <!--<Message Text="@(None)" Importance="High" />-->
+    </Target>
+</Project>

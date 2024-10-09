@@ -1,0 +1,1068 @@
+{
+  "$type": "DocumentComposite",
+  "title": "LEADTOOLS Document Analyzer",
+  "elementset": [
+    {
+      "$type": "UnstructuredElementSet",
+      "feature": "unstructured",
+      "name": "group_STREET ADDRESS_WITH_EXCLUSIONS",
+      "version": "1.0",
+      "element": {
+        "$type": "GroupElement",
+        "elements": [
+          {
+            "$type": "GroupElement",
+            "elements": [
+              {
+                "$type": "GroupElement",
+                "elements": [
+                  {
+                    "$type": "RegexInspectorElement",
+                    "includeWholeWord": false,
+                    "prefixFiltering": [],
+                    "postfixFiltering": [],
+                    "supportBlockTextInRegexElement": true,
+                    "includeWholeLine": false,
+                    "matchingValueHasSameCharactersHeights": false,
+                    "multipleLinesOption": {
+                      "$type": "MultipleLinesOptions",
+                      "multipleLinesMatching": false,
+                      "maximumLines": 2147483647,
+                      "leftAlignedLines": false
+                    },
+                    "regexParameters": [
+                      {
+                        "$type": "RegexParameters",
+                        "pattern": "Client Address:",
+                        "patternIsOEM": false,
+                        "ignoreSpaces": false,
+                        "ignoreCase": true,
+                        "approximateRegexMode": "DISABLED",
+                        "useLettersToNumbersMapping": false,
+                        "allowSubWordsMatching": true,
+                        "minimumLength": 1,
+                        "minimumCharacterLength": 1,
+                        "minimumDigitsCount": 0,
+                        "minimumLettersCount": 0,
+                        "maximumCost": 0,
+                        "ignoreLargeSpacesBetweenChars": false
+                      }
+                    ],
+                    "inputVariableIds": [],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Street Address_label"
+                  },
+                  {
+                    "$type": "RelativeLocationElement",
+                    "relativeLocationParameters": [
+                      {
+                        "$type": "RelativeLocationParameter",
+                        "location": "RIGHT",
+                        "searchWindowSize": {
+                          "$type": "SearchWindowSize",
+                          "windowSize": 5,
+                          "gapWindowSize": 2,
+                          "sizeUnit": "WORDS",
+                          "outputUnit": "NONE",
+                          "skipedLines": []
+                        }
+                      }
+                    ],
+                    "inputVariableIds": [
+                      "Street Address_label"
+                    ],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Street Address_location"
+                  },
+                  {
+                    "$type": "RegexInspectorElement",
+                    "includeWholeWord": false,
+                    "prefixFiltering": [],
+                    "postfixFiltering": [],
+                    "supportBlockTextInRegexElement": true,
+                    "includeWholeLine": false,
+                    "matchingValueHasSameCharactersHeights": false,
+                    "multipleLinesOption": {
+                      "$type": "MultipleLinesOptions",
+                      "multipleLinesMatching": false,
+                      "maximumLines": 2147483647,
+                      "leftAlignedLines": false
+                    },
+                    "regexParameters": [
+                      {
+                        "$type": "RegexParameters",
+                        "pattern": "value:Street Address",
+                        "patternIsOEM": true,
+                        "ignoreSpaces": false,
+                        "ignoreCase": true,
+                        "approximateRegexMode": "AUTO",
+                        "useLettersToNumbersMapping": false,
+                        "allowSubWordsMatching": true,
+                        "minimumLength": 1,
+                        "minimumCharacterLength": 1,
+                        "minimumDigitsCount": 0,
+                        "minimumLettersCount": 0,
+                        "maximumCost": -1,
+                        "ignoreLargeSpacesBetweenChars": false
+                      }
+                    ],
+                    "inputVariableIds": [
+                      "Street Address_location"
+                    ],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Street Address_value"
+                  }
+                ],
+                "logicalOperationElement": null,
+                "inputVariableIds": [],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false",
+                    "NAME": "group_Street Address"
+                  }
+                },
+                "id": "group_STREET ADDRESS"
+              },
+              {
+                "$type": "RegexInspectorElement",
+                "includeWholeWord": false,
+                "prefixFiltering": [],
+                "postfixFiltering": [],
+                "supportBlockTextInRegexElement": true,
+                "includeWholeLine": false,
+                "matchingValueHasSameCharactersHeights": false,
+                "multipleLinesOption": {
+                  "$type": "MultipleLinesOptions",
+                  "multipleLinesMatching": false,
+                  "maximumLines": 2147483647,
+                  "leftAlignedLines": false
+                },
+                "regexParameters": [
+                  {
+                    "$type": "RegexParameters",
+                    "pattern": "value:Zip Code",
+                    "patternIsOEM": true,
+                    "ignoreSpaces": false,
+                    "ignoreCase": true,
+                    "approximateRegexMode": "AUTO",
+                    "useLettersToNumbersMapping": false,
+                    "allowSubWordsMatching": true,
+                    "minimumLength": 1,
+                    "minimumCharacterLength": 1,
+                    "minimumDigitsCount": 0,
+                    "minimumLettersCount": 0,
+                    "maximumCost": -1,
+                    "ignoreLargeSpacesBetweenChars": false
+                  }
+                ],
+                "inputVariableIds": [],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Zip Code"
+              },
+              {
+                "$type": "GroupElement",
+                "elements": [
+                  {
+                    "$type": "RegexInspectorElement",
+                    "includeWholeWord": false,
+                    "prefixFiltering": [],
+                    "postfixFiltering": [],
+                    "supportBlockTextInRegexElement": true,
+                    "includeWholeLine": false,
+                    "matchingValueHasSameCharactersHeights": false,
+                    "multipleLinesOption": {
+                      "$type": "MultipleLinesOptions",
+                      "multipleLinesMatching": false,
+                      "maximumLines": 2147483647,
+                      "leftAlignedLines": false
+                    },
+                    "regexParameters": [
+                      {
+                        "$type": "RegexParameters",
+                        "pattern": "Local Phone: ",
+                        "patternIsOEM": false,
+                        "ignoreSpaces": false,
+                        "ignoreCase": true,
+                        "approximateRegexMode": "DISABLED",
+                        "useLettersToNumbersMapping": false,
+                        "allowSubWordsMatching": true,
+                        "minimumLength": 1,
+                        "minimumCharacterLength": 1,
+                        "minimumDigitsCount": 0,
+                        "minimumLettersCount": 0,
+                        "maximumCost": 0,
+                        "ignoreLargeSpacesBetweenChars": false
+                      }
+                    ],
+                    "inputVariableIds": [],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Phone_label"
+                  },
+                  {
+                    "$type": "RelativeLocationElement",
+                    "relativeLocationParameters": [
+                      {
+                        "$type": "RelativeLocationParameter",
+                        "location": "RIGHT",
+                        "searchWindowSize": {
+                          "$type": "SearchWindowSize",
+                          "windowSize": 5,
+                          "gapWindowSize": 2,
+                          "sizeUnit": "WORDS",
+                          "outputUnit": "NONE",
+                          "skipedLines": []
+                        }
+                      }
+                    ],
+                    "inputVariableIds": [
+                      "Phone_label"
+                    ],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Phone_location"
+                  },
+                  {
+                    "$type": "RegexInspectorElement",
+                    "includeWholeWord": false,
+                    "prefixFiltering": [],
+                    "postfixFiltering": [],
+                    "supportBlockTextInRegexElement": true,
+                    "includeWholeLine": false,
+                    "matchingValueHasSameCharactersHeights": false,
+                    "multipleLinesOption": {
+                      "$type": "MultipleLinesOptions",
+                      "multipleLinesMatching": false,
+                      "maximumLines": 2147483647,
+                      "leftAlignedLines": false
+                    },
+                    "regexParameters": [
+                      {
+                        "$type": "RegexParameters",
+                        "pattern": "value:Phone",
+                        "patternIsOEM": true,
+                        "ignoreSpaces": false,
+                        "ignoreCase": true,
+                        "approximateRegexMode": "AUTO",
+                        "useLettersToNumbersMapping": false,
+                        "allowSubWordsMatching": true,
+                        "minimumLength": 1,
+                        "minimumCharacterLength": 1,
+                        "minimumDigitsCount": 0,
+                        "minimumLettersCount": 0,
+                        "maximumCost": -1,
+                        "ignoreLargeSpacesBetweenChars": false
+                      }
+                    ],
+                    "inputVariableIds": [
+                      "Phone_location"
+                    ],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Phone_value"
+                  }
+                ],
+                "logicalOperationElement": null,
+                "inputVariableIds": [],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false",
+                    "NAME": "group_Phone"
+                  }
+                },
+                "id": "group_PHONE"
+              },
+              {
+                "$type": "GroupElement",
+                "elements": [
+                  {
+                    "$type": "RegexInspectorElement",
+                    "includeWholeWord": false,
+                    "prefixFiltering": [],
+                    "postfixFiltering": [],
+                    "supportBlockTextInRegexElement": true,
+                    "includeWholeLine": false,
+                    "matchingValueHasSameCharactersHeights": false,
+                    "multipleLinesOption": {
+                      "$type": "MultipleLinesOptions",
+                      "multipleLinesMatching": false,
+                      "maximumLines": 2147483647,
+                      "leftAlignedLines": false
+                    },
+                    "regexParameters": [
+                      {
+                        "$type": "RegexParameters",
+                        "pattern": "E-Mail:",
+                        "patternIsOEM": false,
+                        "ignoreSpaces": false,
+                        "ignoreCase": true,
+                        "approximateRegexMode": "DISABLED",
+                        "useLettersToNumbersMapping": false,
+                        "allowSubWordsMatching": true,
+                        "minimumLength": 1,
+                        "minimumCharacterLength": 1,
+                        "minimumDigitsCount": 0,
+                        "minimumLettersCount": 0,
+                        "maximumCost": 0,
+                        "ignoreLargeSpacesBetweenChars": false
+                      }
+                    ],
+                    "inputVariableIds": [],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Email_label"
+                  },
+                  {
+                    "$type": "RelativeLocationElement",
+                    "relativeLocationParameters": [
+                      {
+                        "$type": "RelativeLocationParameter",
+                        "location": "RIGHT",
+                        "searchWindowSize": {
+                          "$type": "SearchWindowSize",
+                          "windowSize": 5,
+                          "gapWindowSize": 2,
+                          "sizeUnit": "WORDS",
+                          "outputUnit": "NONE",
+                          "skipedLines": []
+                        }
+                      }
+                    ],
+                    "inputVariableIds": [
+                      "Email_label"
+                    ],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Email_location"
+                  },
+                  {
+                    "$type": "RegexInspectorElement",
+                    "includeWholeWord": false,
+                    "prefixFiltering": [],
+                    "postfixFiltering": [],
+                    "supportBlockTextInRegexElement": true,
+                    "includeWholeLine": false,
+                    "matchingValueHasSameCharactersHeights": false,
+                    "multipleLinesOption": {
+                      "$type": "MultipleLinesOptions",
+                      "multipleLinesMatching": false,
+                      "maximumLines": 2147483647,
+                      "leftAlignedLines": false
+                    },
+                    "regexParameters": [
+                      {
+                        "$type": "RegexParameters",
+                        "pattern": "value:Email",
+                        "patternIsOEM": true,
+                        "ignoreSpaces": false,
+                        "ignoreCase": true,
+                        "approximateRegexMode": "AUTO",
+                        "useLettersToNumbersMapping": false,
+                        "allowSubWordsMatching": true,
+                        "minimumLength": 1,
+                        "minimumCharacterLength": 1,
+                        "minimumDigitsCount": 0,
+                        "minimumLettersCount": 0,
+                        "maximumCost": -1,
+                        "ignoreLargeSpacesBetweenChars": false
+                      }
+                    ],
+                    "inputVariableIds": [
+                      "Email_location"
+                    ],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Email_value"
+                  }
+                ],
+                "logicalOperationElement": null,
+                "inputVariableIds": [],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false",
+                    "NAME": "group_Email"
+                  }
+                },
+                "id": "group_EMAIL"
+              },
+              {
+                "$type": "GroupElement",
+                "elements": [
+                  {
+                    "$type": "RegexInspectorElement",
+                    "includeWholeWord": false,
+                    "prefixFiltering": [],
+                    "postfixFiltering": [],
+                    "supportBlockTextInRegexElement": true,
+                    "includeWholeLine": false,
+                    "matchingValueHasSameCharactersHeights": false,
+                    "multipleLinesOption": {
+                      "$type": "MultipleLinesOptions",
+                      "multipleLinesMatching": false,
+                      "maximumLines": 2147483647,
+                      "leftAlignedLines": false
+                    },
+                    "regexParameters": [
+                      {
+                        "$type": "RegexParameters",
+                        "pattern": "Client Legal Name:",
+                        "patternIsOEM": false,
+                        "ignoreSpaces": false,
+                        "ignoreCase": true,
+                        "approximateRegexMode": "DISABLED",
+                        "useLettersToNumbersMapping": false,
+                        "allowSubWordsMatching": true,
+                        "minimumLength": 1,
+                        "minimumCharacterLength": 1,
+                        "minimumDigitsCount": 0,
+                        "minimumLettersCount": 0,
+                        "maximumCost": 0,
+                        "ignoreLargeSpacesBetweenChars": false
+                      }
+                    ],
+                    "inputVariableIds": [],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Name_label"
+                  },
+                  {
+                    "$type": "RelativeLocationElement",
+                    "relativeLocationParameters": [
+                      {
+                        "$type": "RelativeLocationParameter",
+                        "location": "RIGHT",
+                        "searchWindowSize": {
+                          "$type": "SearchWindowSize",
+                          "windowSize": 5,
+                          "gapWindowSize": 2,
+                          "sizeUnit": "WORDS",
+                          "outputUnit": "NONE",
+                          "skipedLines": []
+                        }
+                      }
+                    ],
+                    "inputVariableIds": [
+                      "Name_label"
+                    ],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Name_location"
+                  },
+                  {
+                    "$type": "RegexInspectorElement",
+                    "includeWholeWord": true,
+                    "prefixFiltering": [],
+                    "postfixFiltering": [],
+                    "supportBlockTextInRegexElement": true,
+                    "includeWholeLine": false,
+                    "matchingValueHasSameCharactersHeights": false,
+                    "multipleLinesOption": {
+                      "$type": "MultipleLinesOptions",
+                      "multipleLinesMatching": false,
+                      "maximumLines": 2147483647,
+                      "leftAlignedLines": false
+                    },
+                    "regexParameters": [
+                      {
+                        "$type": "RegexParameters",
+                        "pattern": "[A-Za-z]+(\\s)?[A-Za-z]+(\\s)?[A-Za-z]+",
+                        "patternIsOEM": false,
+                        "ignoreSpaces": false,
+                        "ignoreCase": true,
+                        "approximateRegexMode": "AUTO",
+                        "useLettersToNumbersMapping": false,
+                        "allowSubWordsMatching": true,
+                        "minimumLength": 1,
+                        "minimumCharacterLength": 1,
+                        "minimumDigitsCount": 0,
+                        "minimumLettersCount": 0,
+                        "maximumCost": -1,
+                        "ignoreLargeSpacesBetweenChars": false
+                      }
+                    ],
+                    "inputVariableIds": [
+                      "Name_location"
+                    ],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Name_value"
+                  }
+                ],
+                "logicalOperationElement": null,
+                "inputVariableIds": [],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false",
+                    "NAME": "group_Name"
+                  }
+                },
+                "id": "group_NAME"
+              },
+              {
+                "$type": "LogicalOperationElement",
+                "logicalOperationType": "OR",
+                "inputVariableIds": [
+                  "group_STREET ADDRESS",
+                  "Zip Code",
+                  "group_PHONE",
+                  "group_EMAIL",
+                  "group_NAME"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Street Address_combined"
+              }
+            ],
+            "logicalOperationElement": null,
+            "inputVariableIds": [],
+            "functions": [],
+            "settings": {
+              "$type": "SettingsManager",
+              "settings": {
+                "REPORT_IN_ELEMENT_RESULT": "false",
+                "NAME": "g_Street Address",
+                "LANGUAGE": "en"
+              }
+            },
+            "id": "g_STREET ADDRESS"
+          },
+          {
+            "$type": "GroupElement",
+            "elements": [
+              {
+                "$type": "GroupElement",
+                "elements": [
+                  {
+                    "$type": "RegexInspectorElement",
+                    "includeWholeWord": false,
+                    "prefixFiltering": [],
+                    "postfixFiltering": [],
+                    "supportBlockTextInRegexElement": true,
+                    "includeWholeLine": false,
+                    "matchingValueHasSameCharactersHeights": false,
+                    "multipleLinesOption": {
+                      "$type": "MultipleLinesOptions",
+                      "multipleLinesMatching": false,
+                      "maximumLines": 2147483647,
+                      "leftAlignedLines": false
+                    },
+                    "regexParameters": [
+                      {
+                        "$type": "RegexParameters",
+                        "pattern": "Social Security Number: ",
+                        "patternIsOEM": false,
+                        "ignoreSpaces": false,
+                        "ignoreCase": true,
+                        "approximateRegexMode": "DISABLED",
+                        "useLettersToNumbersMapping": false,
+                        "allowSubWordsMatching": true,
+                        "minimumLength": 1,
+                        "minimumCharacterLength": 1,
+                        "minimumDigitsCount": 0,
+                        "minimumLettersCount": 0,
+                        "maximumCost": 0,
+                        "ignoreLargeSpacesBetweenChars": false
+                      }
+                    ],
+                    "inputVariableIds": [],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Exclude SSN_label"
+                  },
+                  {
+                    "$type": "RelativeLocationElement",
+                    "relativeLocationParameters": [
+                      {
+                        "$type": "RelativeLocationParameter",
+                        "location": "RIGHT",
+                        "searchWindowSize": {
+                          "$type": "SearchWindowSize",
+                          "windowSize": 5,
+                          "gapWindowSize": 2,
+                          "sizeUnit": "WORDS",
+                          "outputUnit": "NONE",
+                          "skipedLines": []
+                        }
+                      }
+                    ],
+                    "inputVariableIds": [
+                      "Exclude SSN_label"
+                    ],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Exclude SSN_location"
+                  },
+                  {
+                    "$type": "RegexInspectorElement",
+                    "includeWholeWord": false,
+                    "prefixFiltering": [],
+                    "postfixFiltering": [],
+                    "supportBlockTextInRegexElement": true,
+                    "includeWholeLine": false,
+                    "matchingValueHasSameCharactersHeights": false,
+                    "multipleLinesOption": {
+                      "$type": "MultipleLinesOptions",
+                      "multipleLinesMatching": false,
+                      "maximumLines": 2147483647,
+                      "leftAlignedLines": false
+                    },
+                    "regexParameters": [
+                      {
+                        "$type": "RegexParameters",
+                        "pattern": "value:Social Security Number",
+                        "patternIsOEM": true,
+                        "ignoreSpaces": false,
+                        "ignoreCase": true,
+                        "approximateRegexMode": "AUTO",
+                        "useLettersToNumbersMapping": false,
+                        "allowSubWordsMatching": true,
+                        "minimumLength": 1,
+                        "minimumCharacterLength": 1,
+                        "minimumDigitsCount": 0,
+                        "minimumLettersCount": 0,
+                        "maximumCost": -1,
+                        "ignoreLargeSpacesBetweenChars": false
+                      }
+                    ],
+                    "inputVariableIds": [
+                      "Exclude SSN_location"
+                    ],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Exclude SSN_value"
+                  }
+                ],
+                "logicalOperationElement": null,
+                "inputVariableIds": [],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false",
+                    "NAME": "group_Exclude SSN"
+                  }
+                },
+                "id": "group_EXCLUDE SSN"
+              },
+              {
+                "$type": "GroupElement",
+                "elements": [
+                  {
+                    "$type": "RegexInspectorElement",
+                    "includeWholeWord": false,
+                    "prefixFiltering": [],
+                    "postfixFiltering": [],
+                    "supportBlockTextInRegexElement": true,
+                    "includeWholeLine": false,
+                    "matchingValueHasSameCharactersHeights": false,
+                    "multipleLinesOption": {
+                      "$type": "MultipleLinesOptions",
+                      "multipleLinesMatching": false,
+                      "maximumLines": 2147483647,
+                      "leftAlignedLines": false
+                    },
+                    "regexParameters": [
+                      {
+                        "$type": "RegexParameters",
+                        "pattern": "Account Number:",
+                        "patternIsOEM": false,
+                        "ignoreSpaces": false,
+                        "ignoreCase": true,
+                        "approximateRegexMode": "DISABLED",
+                        "useLettersToNumbersMapping": false,
+                        "allowSubWordsMatching": true,
+                        "minimumLength": 1,
+                        "minimumCharacterLength": 1,
+                        "minimumDigitsCount": 0,
+                        "minimumLettersCount": 0,
+                        "maximumCost": 0,
+                        "ignoreLargeSpacesBetweenChars": false
+                      }
+                    ],
+                    "inputVariableIds": [],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Exclude Account Number_label"
+                  },
+                  {
+                    "$type": "RelativeLocationElement",
+                    "relativeLocationParameters": [
+                      {
+                        "$type": "RelativeLocationParameter",
+                        "location": "RIGHT",
+                        "searchWindowSize": {
+                          "$type": "SearchWindowSize",
+                          "windowSize": 5,
+                          "gapWindowSize": 2,
+                          "sizeUnit": "WORDS",
+                          "outputUnit": "NONE",
+                          "skipedLines": []
+                        }
+                      }
+                    ],
+                    "inputVariableIds": [
+                      "Exclude Account Number_label"
+                    ],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Exclude Account Number_location"
+                  },
+                  {
+                    "$type": "RegexInspectorElement",
+                    "includeWholeWord": false,
+                    "prefixFiltering": [],
+                    "postfixFiltering": [],
+                    "supportBlockTextInRegexElement": true,
+                    "includeWholeLine": false,
+                    "matchingValueHasSameCharactersHeights": false,
+                    "multipleLinesOption": {
+                      "$type": "MultipleLinesOptions",
+                      "multipleLinesMatching": false,
+                      "maximumLines": 2147483647,
+                      "leftAlignedLines": false
+                    },
+                    "regexParameters": [
+                      {
+                        "$type": "RegexParameters",
+                        "pattern": "value:Number",
+                        "patternIsOEM": true,
+                        "ignoreSpaces": false,
+                        "ignoreCase": true,
+                        "approximateRegexMode": "AUTO",
+                        "useLettersToNumbersMapping": false,
+                        "allowSubWordsMatching": true,
+                        "minimumLength": 1,
+                        "minimumCharacterLength": 1,
+                        "minimumDigitsCount": 0,
+                        "minimumLettersCount": 0,
+                        "maximumCost": -1,
+                        "ignoreLargeSpacesBetweenChars": false
+                      }
+                    ],
+                    "inputVariableIds": [
+                      "Exclude Account Number_location"
+                    ],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Exclude Account Number_value"
+                  }
+                ],
+                "logicalOperationElement": null,
+                "inputVariableIds": [],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false",
+                    "NAME": "group_Exclude Account Number"
+                  }
+                },
+                "id": "group_EXCLUDE ACCOUNT NUMBER"
+              },
+              {
+                "$type": "GroupElement",
+                "elements": [
+                  {
+                    "$type": "RegexInspectorElement",
+                    "includeWholeWord": false,
+                    "prefixFiltering": [],
+                    "postfixFiltering": [],
+                    "supportBlockTextInRegexElement": true,
+                    "includeWholeLine": false,
+                    "matchingValueHasSameCharactersHeights": false,
+                    "multipleLinesOption": {
+                      "$type": "MultipleLinesOptions",
+                      "multipleLinesMatching": false,
+                      "maximumLines": 2147483647,
+                      "leftAlignedLines": false
+                    },
+                    "regexParameters": [
+                      {
+                        "$type": "RegexParameters",
+                        "pattern": "Routing Number: ",
+                        "patternIsOEM": false,
+                        "ignoreSpaces": false,
+                        "ignoreCase": true,
+                        "approximateRegexMode": "DISABLED",
+                        "useLettersToNumbersMapping": false,
+                        "allowSubWordsMatching": true,
+                        "minimumLength": 1,
+                        "minimumCharacterLength": 1,
+                        "minimumDigitsCount": 0,
+                        "minimumLettersCount": 0,
+                        "maximumCost": 0,
+                        "ignoreLargeSpacesBetweenChars": false
+                      }
+                    ],
+                    "inputVariableIds": [],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Exclude Routing Number_label"
+                  },
+                  {
+                    "$type": "RelativeLocationElement",
+                    "relativeLocationParameters": [
+                      {
+                        "$type": "RelativeLocationParameter",
+                        "location": "RIGHT",
+                        "searchWindowSize": {
+                          "$type": "SearchWindowSize",
+                          "windowSize": 5,
+                          "gapWindowSize": 2,
+                          "sizeUnit": "WORDS",
+                          "outputUnit": "NONE",
+                          "skipedLines": []
+                        }
+                      }
+                    ],
+                    "inputVariableIds": [
+                      "Exclude Routing Number_label"
+                    ],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Exclude Routing Number_location"
+                  },
+                  {
+                    "$type": "RegexInspectorElement",
+                    "includeWholeWord": false,
+                    "prefixFiltering": [],
+                    "postfixFiltering": [],
+                    "supportBlockTextInRegexElement": true,
+                    "includeWholeLine": false,
+                    "matchingValueHasSameCharactersHeights": false,
+                    "multipleLinesOption": {
+                      "$type": "MultipleLinesOptions",
+                      "multipleLinesMatching": false,
+                      "maximumLines": 2147483647,
+                      "leftAlignedLines": false
+                    },
+                    "regexParameters": [
+                      {
+                        "$type": "RegexParameters",
+                        "pattern": "value:Number",
+                        "patternIsOEM": true,
+                        "ignoreSpaces": false,
+                        "ignoreCase": true,
+                        "approximateRegexMode": "AUTO",
+                        "useLettersToNumbersMapping": false,
+                        "allowSubWordsMatching": true,
+                        "minimumLength": 1,
+                        "minimumCharacterLength": 1,
+                        "minimumDigitsCount": 0,
+                        "minimumLettersCount": 0,
+                        "maximumCost": -1,
+                        "ignoreLargeSpacesBetweenChars": false
+                      }
+                    ],
+                    "inputVariableIds": [
+                      "Exclude Routing Number_location"
+                    ],
+                    "functions": [],
+                    "settings": {
+                      "$type": "SettingsManager",
+                      "settings": {
+                        "REPORT_IN_ELEMENT_RESULT": "false"
+                      }
+                    },
+                    "id": "Exclude Routing Number_value"
+                  }
+                ],
+                "logicalOperationElement": null,
+                "inputVariableIds": [],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false",
+                    "NAME": "group_Exclude Routing Number"
+                  }
+                },
+                "id": "group_EXCLUDE ROUTING NUMBER"
+              },
+              {
+                "$type": "LogicalOperationElement",
+                "logicalOperationType": "OR",
+                "inputVariableIds": [
+                  "group_EXCLUDE SSN",
+                  "group_EXCLUDE ACCOUNT NUMBER",
+                  "group_EXCLUDE ROUTING NUMBER"
+                ],
+                "functions": [],
+                "settings": {
+                  "$type": "SettingsManager",
+                  "settings": {
+                    "REPORT_IN_ELEMENT_RESULT": "false"
+                  }
+                },
+                "id": "Street Address_exclude_combined"
+              }
+            ],
+            "logicalOperationElement": null,
+            "inputVariableIds": [],
+            "functions": [],
+            "settings": {
+              "$type": "SettingsManager",
+              "settings": {
+                "REPORT_IN_ELEMENT_RESULT": "false",
+                "NAME": "g_Street Address_exclude",
+                "LANGUAGE": "en"
+              }
+            },
+            "id": "g_STREET ADDRESS_EXCLUDE"
+          },
+          {
+            "$type": "LogicalOperationElement",
+            "logicalOperationType": "EXCLUDE",
+            "inputVariableIds": [
+              "g_STREET ADDRESS",
+              "g_STREET ADDRESS_EXCLUDE"
+            ],
+            "functions": [],
+            "settings": {
+              "$type": "SettingsManager",
+              "settings": {
+                "REPORT_IN_ELEMENT_RESULT": "false"
+              }
+            },
+            "id": "Exclude_g_STREET ADDRESS_EXCLUDE_from_g_STREET ADDRESS"
+          }
+        ],
+        "logicalOperationElement": null,
+        "inputVariableIds": [],
+        "functions": [],
+        "settings": {
+          "$type": "SettingsManager",
+          "settings": {
+            "REPORT_IN_ELEMENT_RESULT": "true",
+            "NAME": "group_Street Address_with_exclusions"
+          }
+        },
+        "id": "group_STREET ADDRESS_WITH_EXCLUSIONS"
+      }
+    }
+  ],
+  "actions": null,
+  "meta": "[{\"ResourceType\":\"DataModel\",\"ImplVersion\":\"1.0\",\"InstanceType\":\"StandardFeature\",\"Location\":\"Leadtools.Document.Unstructured.Highlevel\",\"Instance\":{\"LabelName\":\"\",\"LabelOptions\":{\"Name\":null,\"Value\":null,\"Where\":\"RIGHT\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"MaxGapBetweenLinesLB\":2,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false},\"LabelCanSpanLines\":false,\"CustomLabel\":true,\"ValueName\":\"Street Address\",\"ValueCanSpanLines\":false,\"CustomValue\":false,\"CustomLabels\":[{\"Name\":null,\"Value\":{\"Name\":null,\"Pattern\":\"Client Address:\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"DISABLED\"},\"TweaksForResults\":{\"IncludeWholeWord\":false,\"IncludeWholeLine\":false}},\"Where\":\"RIGHT\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"MaxGapBetweenLinesLB\":2,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false}],\"CustomValues\":[],\"HasCustomLabel\":true,\"HasCustomValue\":false,\"Name\":\"Street Address\",\"Excluded\":false,\"Excluding\":[],\"Functions\":[]}},{\"ResourceType\":\"DataModel\",\"ImplVersion\":\"1.0\",\"InstanceType\":\"StandardFeature\",\"Location\":\"Leadtools.Document.Unstructured.Highlevel\",\"Instance\":{\"LabelName\":null,\"LabelOptions\":{\"Name\":null,\"Value\":null,\"Where\":\"RIGHT\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"MaxGapBetweenLinesLB\":2,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false},\"LabelCanSpanLines\":false,\"CustomLabel\":false,\"ValueName\":\"Zip Code\",\"ValueCanSpanLines\":false,\"CustomValue\":false,\"CustomLabels\":[],\"CustomValues\":[],\"HasCustomLabel\":false,\"HasCustomValue\":false,\"Name\":\"Zip Code\",\"Excluded\":false,\"Excluding\":[],\"Functions\":[]}},{\"ResourceType\":\"DataModel\",\"ImplVersion\":\"1.0\",\"InstanceType\":\"StandardFeature\",\"Location\":\"Leadtools.Document.Unstructured.Highlevel\",\"Instance\":{\"LabelName\":\"\",\"LabelOptions\":{\"Name\":null,\"Value\":null,\"Where\":\"RIGHT\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"MaxGapBetweenLinesLB\":2,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false},\"LabelCanSpanLines\":false,\"CustomLabel\":true,\"ValueName\":\"Phone\",\"ValueCanSpanLines\":false,\"CustomValue\":false,\"CustomLabels\":[{\"Name\":null,\"Value\":{\"Name\":null,\"Pattern\":\"Local Phone: \",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"DISABLED\"},\"TweaksForResults\":{\"IncludeWholeWord\":false,\"IncludeWholeLine\":false}},\"Where\":\"RIGHT\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"MaxGapBetweenLinesLB\":2,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false}],\"CustomValues\":[],\"HasCustomLabel\":true,\"HasCustomValue\":false,\"Name\":\"Phone\",\"Excluded\":false,\"Excluding\":[],\"Functions\":[]}},{\"ResourceType\":\"DataModel\",\"ImplVersion\":\"1.0\",\"InstanceType\":\"StandardFeature\",\"Location\":\"Leadtools.Document.Unstructured.Highlevel\",\"Instance\":{\"LabelName\":\"\",\"LabelOptions\":{\"Name\":null,\"Value\":null,\"Where\":\"RIGHT\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"MaxGapBetweenLinesLB\":2,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false},\"LabelCanSpanLines\":false,\"CustomLabel\":true,\"ValueName\":\"Email\",\"ValueCanSpanLines\":false,\"CustomValue\":false,\"CustomLabels\":[{\"Name\":null,\"Value\":{\"Name\":null,\"Pattern\":\"E-Mail:\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"DISABLED\"},\"TweaksForResults\":{\"IncludeWholeWord\":false,\"IncludeWholeLine\":false}},\"Where\":\"RIGHT\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"MaxGapBetweenLinesLB\":2,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false}],\"CustomValues\":[],\"HasCustomLabel\":true,\"HasCustomValue\":false,\"Name\":\"Email\",\"Excluded\":false,\"Excluding\":[],\"Functions\":[]}},{\"ResourceType\":\"DataModel\",\"ImplVersion\":\"1.0\",\"InstanceType\":\"CustomFeature\",\"Location\":\"Leadtools.Document.Unstructured.Highlevel\",\"Instance\":{\"Label\":[{\"Name\":null,\"Value\":{\"Name\":null,\"Pattern\":\"Client Legal Name:\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"DISABLED\"},\"TweaksForResults\":{\"IncludeWholeWord\":false,\"IncludeWholeLine\":false}},\"Where\":\"RIGHT\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"MaxGapBetweenLinesLB\":2,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false}],\"Value\":[{\"Name\":null,\"Pattern\":\"[A-Za-z]+(\\\\s)?[A-Za-z]+(\\\\s)?[A-Za-z]+\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"AUTO\"},\"TweaksForResults\":{\"IncludeWholeWord\":true,\"IncludeWholeLine\":false}}],\"HasLabel\":true,\"HasValues\":true,\"Name\":\"Name\",\"Excluded\":false,\"Excluding\":[],\"Functions\":[]}},{\"ResourceType\":\"DataModel\",\"ImplVersion\":\"1.0\",\"InstanceType\":\"StandardFeature\",\"Location\":\"Leadtools.Document.Unstructured.Highlevel\",\"Instance\":{\"LabelName\":\"\",\"LabelOptions\":{\"Name\":null,\"Value\":null,\"Where\":\"RIGHT\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"MaxGapBetweenLinesLB\":2,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false},\"LabelCanSpanLines\":false,\"CustomLabel\":true,\"ValueName\":\"Social Security Number\",\"ValueCanSpanLines\":false,\"CustomValue\":false,\"CustomLabels\":[{\"Name\":null,\"Value\":{\"Name\":null,\"Pattern\":\"Social Security Number: \",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"DISABLED\"},\"TweaksForResults\":{\"IncludeWholeWord\":false,\"IncludeWholeLine\":false}},\"Where\":\"RIGHT\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"MaxGapBetweenLinesLB\":2,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false}],\"CustomValues\":[],\"HasCustomLabel\":true,\"HasCustomValue\":false,\"Name\":\"Exclude SSN\",\"Excluded\":true,\"Excluding\":[],\"Functions\":[]}},{\"ResourceType\":\"DataModel\",\"ImplVersion\":\"1.0\",\"InstanceType\":\"StandardFeature\",\"Location\":\"Leadtools.Document.Unstructured.Highlevel\",\"Instance\":{\"LabelName\":\"\",\"LabelOptions\":{\"Name\":null,\"Value\":null,\"Where\":\"RIGHT\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"MaxGapBetweenLinesLB\":2,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false},\"LabelCanSpanLines\":false,\"CustomLabel\":true,\"ValueName\":\"Number\",\"ValueCanSpanLines\":false,\"CustomValue\":false,\"CustomLabels\":[{\"Name\":null,\"Value\":{\"Name\":null,\"Pattern\":\"Account Number:\",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"DISABLED\"},\"TweaksForResults\":{\"IncludeWholeWord\":false,\"IncludeWholeLine\":false}},\"Where\":\"RIGHT\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"MaxGapBetweenLinesLB\":2,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false}],\"CustomValues\":[],\"HasCustomLabel\":true,\"HasCustomValue\":false,\"Name\":\"Exclude Account Number\",\"Excluded\":true,\"Excluding\":[],\"Functions\":[]}},{\"ResourceType\":\"DataModel\",\"ImplVersion\":\"1.0\",\"InstanceType\":\"StandardFeature\",\"Location\":\"Leadtools.Document.Unstructured.Highlevel\",\"Instance\":{\"LabelName\":\"\",\"LabelOptions\":{\"Name\":null,\"Value\":null,\"Where\":\"RIGHT\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"MaxGapBetweenLinesLB\":2,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false},\"LabelCanSpanLines\":false,\"CustomLabel\":true,\"ValueName\":\"Number\",\"ValueCanSpanLines\":false,\"CustomValue\":false,\"CustomLabels\":[{\"Name\":null,\"Value\":{\"Name\":null,\"Pattern\":\"Routing Number: \",\"PatternIsRegex\":true,\"PatternIsOEM\":false,\"PatternCanSpanLines\":false,\"Tweaks\":{\"IgnoreWhiteSpace\":false,\"IgnoreCase\":true,\"IgnoreShortWords\":false,\"IgnoreIfShorterThan\":1,\"MatchWholeWord\":false,\"LettersToNumbers\":false,\"FuzzyMatching\":\"DISABLED\"},\"TweaksForResults\":{\"IncludeWholeWord\":false,\"IncludeWholeLine\":false}},\"Where\":\"RIGHT\",\"LocationProximity\":5,\"MaxGapBetweenWords\":2,\"MaxGapBetweenLines\":1,\"MaxGapBetweenLinesLB\":2,\"FindAllOccurrences\":false,\"LettersToNumbersForOccurrences\":false}],\"CustomValues\":[],\"HasCustomLabel\":true,\"HasCustomValue\":false,\"Name\":\"Exclude Routing Number\",\"Excluded\":true,\"Excluding\":[],\"Functions\":[]}}]"
+}

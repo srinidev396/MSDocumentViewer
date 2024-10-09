@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentService", "DocumentService.csproj", "{2E29F67A-2CC8-4537-B482-F984B931B54C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E29F67A-2CC8-4537-B482-F984B931B54C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E29F67A-2CC8-4537-B482-F984B931B54C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E29F67A-2CC8-4537-B482-F984B931B54C}.Debug|x64.ActiveCfg = Debug|x64
+		{2E29F67A-2CC8-4537-B482-F984B931B54C}.Debug|x64.Build.0 = Debug|x64
+		{2E29F67A-2CC8-4537-B482-F984B931B54C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E29F67A-2CC8-4537-B482-F984B931B54C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E29F67A-2CC8-4537-B482-F984B931B54C}.Release|x64.ActiveCfg = Release|x64
+		{2E29F67A-2CC8-4537-B482-F984B931B54C}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {076BB869-8430-41D9-848D-3C1383C14525}
+	EndGlobalSection
+EndGlobal

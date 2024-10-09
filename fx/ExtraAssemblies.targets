@@ -1,0 +1,185 @@
+<!-- List of files that are not referenced directly by the project but are required to be in the bin folder -->
+<!-- These includes file filters and other .NET assemblies that are loaded at runtime -->
+<!-- You can add or remove any of these files if not required by your deployment -->
+<Project DefaultTargets = "Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
+   <ItemGroup>
+      <None Include="$(LeadConfigPath)DocumentFormat.OpenXml.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.ColorConversion.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Afp.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Bmp.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Cmp.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Pub.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Mob.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Htm.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Cmw.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Doc.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Dox.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Fax.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Gif.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Ica.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.J2k.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Jpeg2000.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Jb2.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Jbg.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Png.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Ppt.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Ppx.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Pst.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Ptk.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Raw.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Rtf.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Tif.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Txt.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Webp.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Wmf.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Xls.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Xlx.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Codecs.Xps.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Pdf.Annotations.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Annotations.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Annotations.Rendering.WinForms.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Annotations.Winforms.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Ocr.LEADEngine.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.ImageProcessing.Color.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.ImageProcessing.Core.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.ImageProcessing.Effects.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.ImageProcessing.SpecialEffects.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.ImageProcessing.Utilities.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Kernel.Annotations.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Pdf.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Pdf.Utilities.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Vector.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <!-- Uncomment to use with Multiplatform drawing engine. -->
+      <!--<None Include="$(LeadConfigPath)Leadtools.Drawing.MP.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>-->
+      <None Include="$(LeadConfigPath)Leadtools.Barcode.OneD.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Barcode.PdfRead.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Barcode.QrRead.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Barcode.DatamatrixRead.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.Barcode.Lead2DRead.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.SpellCheckers.Hunspell.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.SpellCheckers.OS.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)Leadtools.WebKitEngine.dll" Visible="false">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)libcrypto-1_1.dll" Visible="false" Condition="Exists('$(LeadConfigPath)libcrypto-1_1.dll')" >
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)libssl-1_1.dll" Visible="false" Condition="Exists('$(LeadConfigPath)libssl-1_1.dll')" >
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)libcrypto-1_1-x64.dll" Visible="false" Condition="Exists('$(LeadConfigPath)libcrypto-1_1-x64.dll')" >
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Include="$(LeadConfigPath)libssl-1_1-x64.dll" Visible="false" Condition="Exists('$(LeadConfigPath)libssl-1_1-x64.dll')" >
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+   </ItemGroup>
+</Project>
