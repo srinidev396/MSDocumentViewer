@@ -83,7 +83,7 @@ stages:
         ConnectionType: 'AzureRM'
         azureSubscription: 'Microservices_Connection'
         appType: 'webApp'
-        WebAppName: 'webapp-msqa-cc-DocumentViewer'
+        WebAppName: 'webapp-msqa-cc-documentviewer'
         package: '$(Pipeline.Workspace)/drop'
 
   #  - script: cd /d F:\DevOps\QA_Test_Automation && mvn clean test -Dgroups=Smoke,setUp -Dprod=api -Denv=devopsqa -Dtest=api.Api_TestCases.**
