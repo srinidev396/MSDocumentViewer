@@ -84,6 +84,7 @@ stages:
         azureSubscription: 'Microservices_Connection'
         appType: 'webApp'
         ResourceGroupName: 'QA-F11-Server_group'
+        
         WebAppName: 'webapp-msqa-cc-DocumentViewer'
         package: '$(Pipeline.Workspace)/drop'
 
