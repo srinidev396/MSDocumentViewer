@@ -35,37 +35,37 @@ stages:
         ArtifactName: 'drop'
         publishLocation: Container
 
-- stage: DeployQA
-  displayName: 'Deploy to QA'
-  dependsOn: Build
-  jobs:
-  - job: CDQA
-    displayName: 'Continuous Deployment to QA'
-    steps:
-    - download: current
-      artifact: drop
-      displayName: 'Download Build Artifacts'
+# - stage: DeployQA
+#   displayName: 'Deploy to QA'
+#   dependsOn: Build
+#   jobs:
+#   - job: CDQA
+#     displayName: 'Continuous Deployment to QA'
+#     steps:
+#     - download: current
+#       artifact: drop
+#       displayName: 'Download Build Artifacts'
 
-    - task: UseDotNet@2
-      displayName: 'Install .NET Core SDK'
-      inputs:
-        packageType: 'sdk'
-        version: '8.x'  
+#     - task: UseDotNet@2
+#       displayName: 'Install .NET Core SDK'
+#       inputs:
+#         packageType: 'sdk'
+#         version: '8.x'  
     
     
         
 
-    # - task: AzureRmWebAppDeployment@4
-    #   displayName: 'Azure Web App Deploy to QA'
-    #   inputs:
-    #     ConnectionType: 'AzureRM'
-    #     azureSubscription: 'Microservices_Connection'
-    #     appType: 'webApp'
-    #     #ResourceGroupName: 'QA-F11-Server_group'
+#     # - task: AzureRmWebAppDeployment@4
+#     #   displayName: 'Azure Web App Deploy to QA'
+#     #   inputs:
+#     #     ConnectionType: 'AzureRM'
+#     #     azureSubscription: 'Microservices_Connection'
+#     #     appType: 'webApp'
+#     #     #ResourceGroupName: 'QA-F11-Server_group'
         
-    #     #WebAppName: 'webapp-msqa-cc-DocumentViewer' 
-    #     WebAppName: 'webapp-ms-cc-licencedev'
-    #     package: '$(Pipeline.Workspace)/drop'
+#     #     #WebAppName: 'webapp-msqa-cc-DocumentViewer' 
+#     #     WebAppName: 'webapp-ms-cc-licencedev'
+#     #     package: '$(Pipeline.Workspace)/drop'
        
 
 
