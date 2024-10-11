@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<leadtools_cache_manager>
+  <cache_manager>
+    <type>Leadtools.Services.Tools.Cache.DefaultCacheManager</type>
+  </cache_manager>
+</leadtools_cache_manager>

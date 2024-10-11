@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<leadtools_cache_manager>
+  <cache_manager>
+    <type>Leadtools.Services.Tools.Cache.HybridMemoryFileCacheManager</type>
+    <values>
+      <!-- File cache configuration to use-->
+      <value key="file_cache_configuration_file" value="config-filecache.xml" />
+      <!-- File cache cleanup time interval -->
+      <value key="file_cache_cleanup_interval_seconds" value="3600" />
+      <!-- Maximum document data length in bytes for Memory cache. Greater than will go into File cache. Value of 0 means put everything in memory cache -->
+      <value key="memory_cache_maximum_data_length" value="1048576" />
+      <!-- Sliding expiry policy for the memory cache -->
+      <value key="memory_cache_sliding_expiry_policy_seconds" value="3600" />
+    </values>
+  </cache_manager>
+</leadtools_cache_manager>

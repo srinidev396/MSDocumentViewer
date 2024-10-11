@@ -1,0 +1,2242 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DocumentService</name>
+    </assembly>
+    <members>
+        <member name="T:Leadtools.DocumentViewer.Controllers.AnnotationsController">
+            <summary>
+            Used for setting/getting annotations with external applications.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.AnnotationsController.SetAnnotations(Leadtools.DocumentViewer.Models.Annotations.SetAnnotationsRequest)">
+            <summary>
+             Sets annotations into the document.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.AnnotationsController.GetAnnotations(Leadtools.DocumentViewer.Models.Annotations.GetAnnotationsRequest)">
+            <summary>
+             Gets changed annotations from the document.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.AnnotationsController.SetAnnotationsLEAD(Leadtools.DocumentViewer.Models.Annotations.SetAnnotationsLEADRequest)">
+            <summary>
+             Sets LEAD annotations into the document.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.AnnotationsController.GetAnnotationsLEAD(Leadtools.DocumentViewer.Models.Annotations.GetAnnotationsLEADRequest)">
+            <summary>
+             Gets changed LEAD annotations from the document.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.AnnotationsController.SetAnnotationsIBM(Leadtools.DocumentViewer.Models.Annotations.SetAnnotationsIBMRequest)">
+            <summary>
+             Sets IBM P8 annotations into the document.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.AnnotationsController.GetAnnotationsIBM(Leadtools.DocumentViewer.Models.Annotations.GetAnnotationsIBMRequest)">
+            <summary>
+             Gets changed IBM P8 annotations from the document.
+            </summary>
+        </member>
+        <member name="T:Leadtools.DocumentViewer.Controllers.AnalyticsController">
+            <summary>
+            Used with the DocumentFactory class of the LEADTOOLS Document JavaScript library.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.AnalyticsController.GetRuleSets(Leadtools.Services.Models.Analytics.GetRuleSetsRequest)">
+            <summary>
+            Gets all the RuleSets that are registered in the service.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.AnalyticsController.GetActionSets(Leadtools.Services.Models.Analytics.GetActionSetsRequest)">
+            <summary>
+            Gets all the ActionSets that are registered in the service.
+            </summary>
+        </member>
+        <member name="T:Leadtools.DocumentViewer.Controllers.CacheController">
+            <summary>
+            Used to return public items from the cache.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.CacheController.GetDocumentData(System.String)">
+            <summary>
+              Retrieves the original document data as a stream; used primarily for loading a PDF Document's stream
+              for use in client-side PDF Rendering/Text Extraction in Leadtools.Document.Viewer.
+            </summary>
+            <param name="documentId">The identifier for this document.</param>
+            <returns>A stream to the original document data.</returns>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.CacheController.Item(System.String,System.String)">
+            <summary>
+              Retrieves a cache item. Generally this URI should be set up with authentication and accessed with POST to protect sensitive information.
+              CreateConversionResultUri is the source of this URI for the client; conversion results are sent to the client
+              with a relative URI to be accessed from here.
+              This mainly acts as a simple map to the cache directory.
+            </summary>
+            <param name="region">The region (folder) in the cache.</param>
+            <param name="key">The key (filename) in the cache.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Leadtools.DocumentViewer.Controllers.CorsProxyController">
+            <summary>
+            Used with local load document mode.
+            </summary>
+        </member>
+        <member name="F:Leadtools.DocumentViewer.Controllers.MultimediaController._httpClient">
+            <summary>
+            Used to download, convert, and delete multimedia files.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.MultimediaController.GetVideoHelper(Microsoft.AspNetCore.Http.HttpContext,Leadtools.DocumentViewer.Models.Multimedia.GetVideoRequest,System.String)">
+            <summary>
+            Returns a video file.
+            If the mime parameter specifies video/mp4. the controller will attempt to convert the video if it does not match.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.MultimediaController.ConvertVideo(Leadtools.DocumentViewer.Models.Multimedia.ConvertVideoRequest,Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Converts a video file to the specified mime type.
+            The mime type must currently equal video/mp4.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.MultimediaController.DeleteCachedVideo(Leadtools.DocumentViewer.Models.Multimedia.DeleteCachedVideoRequest)">
+            <summary>
+            Deletes a video from the multimedia cache.
+            If the mime type is specified, then only that that associated type will be removed from the cache.
+            Otherwise, the entire video will be removed.
+            </summary>
+        </member>
+        <member name="T:Leadtools.DocumentViewer.Controllers.DocumentController">
+            <summary>
+            Used with the LEADDocument class of the LEADTOOLS Document JavaScript library.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.DocumentController.Decrypt(Leadtools.Services.Models.Document.DecryptRequest)">
+            <summary>
+            Returns a decrypted version of the document when passed the correct password, or throws an exception.
+            </summary>
+            <param name="request">A <see cref="T:Leadtools.Services.Models.Document.DecryptRequest">DecryptRequest</see> containing an identifier and password.</param>
+            <returns>A <see cref="T:Leadtools.Services.Models.Document.DecryptResponse">DecryptResponse</see> containing all new document information.</returns>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.DocumentController.Convert(Leadtools.Services.Models.Document.ConvertRequest)">
+            <summary>
+            Runs the conversion specified by the conversion job data on the document, and stores the result to the cache.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.DocumentController.GetHistory(Leadtools.Services.Models.Document.GetHistoryRequest)">
+            <summary>
+            Retrieves changes to the document since the history was last cleared.
+            </summary>
+        </member>
+        <member name="T:Leadtools.DocumentViewer.Controllers.DocumentEditController">
+            <summary>
+            Used with the LEADDocument class of the LEADTOOLS Document JavaScript library for Document Editing.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.DocumentEditController.GetEditableContent(Leadtools.Services.Models.Document.GetDocumentEditableContentRequest)">
+            <summary>
+             Loads the specified document from the cache, if possible. and returns the document editable content. Errors if the document is not in the cache.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.DocumentEditController.SetEditableContent(Leadtools.Services.Models.Document.SetDocumentEditableContentRequest)">
+            <summary>
+             Sets the document editable content. Errors if the document is not in the cache.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.DocumentEditController.ExportEditableDocument(Leadtools.Services.Models.Document.ConvertDocumentEditableContentRequest)">
+            <summary>
+             Converts the document editable content to the target Document format.
+            </summary>
+        </member>
+        <member name="T:Leadtools.DocumentViewer.Controllers.FactoryController">
+            <summary>
+            Used with the DocumentFactory class of the LEADTOOLS Document JavaScript library.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FactoryController.LoadFromCache(Leadtools.DocumentViewer.Models.Factory.LoadFromCacheRequest)">
+            <summary>
+             Loads the specified document from the cache, if possible. Errors if the document is not in the cache.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FactoryController.LoadFromUri(Leadtools.DocumentViewer.Models.Factory.LoadFromUriRequest)">
+            <summary>
+             Creates and stores an entry for the image at the URI, returning the appropriate Document data.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FactoryController.BeginUpload(Leadtools.DocumentViewer.Models.Factory.BeginUploadRequest)">
+            <summary>
+             Creates a link that a document can be uploaded to for storing in the cache. Meant to be used with UploadDocument.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FactoryController.UploadDocument(Leadtools.DocumentViewer.Models.Factory.UploadDocumentRequest)">
+            <summary>
+            Uploads a chunk of data to the specified URL in the cache.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FactoryController.EndUpload(Leadtools.DocumentViewer.Models.Factory.EndUploadRequest)">
+            <summary>
+             Optional - marks the end of uploading data for the specified URL in the cache. The service can execute commands to do
+             additional processing with this fully-uploaded document.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FactoryController.AbortUploadDocument(Leadtools.DocumentViewer.Models.Factory.AbortUploadDocumentRequest)">
+            <summary>
+            Aborts the document upload.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FactoryController.SaveToCache(Leadtools.DocumentViewer.Models.Factory.SaveToCacheRequest)">
+            <summary>
+             Saves the specified document to the cache. If the document is not in the cache it will be created.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FactoryController.CloneDocument(Leadtools.DocumentViewer.Models.Factory.CloneDocumentRequest)">
+            <summary>
+             Saves the specified document to the cache. If the document is not in the cache it will be created.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FactoryController.Delete(Leadtools.DocumentViewer.Models.Factory.DeleteRequest)">
+            <summary>
+            Deletes the document from the cache.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FactoryController.PurgeCache(System.String)">
+            <summary>
+            Purges the cache of all outdated items. Requires a passcode set on the service's configuration.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FactoryController.GetCacheStatistics(System.String)">
+            <summary>
+            Checks the policies of the cache items and returns statistics, without deleting expired items.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FactoryController.PreCacheDocument(Leadtools.Services.Models.PreCache.PreCacheDocumentRequest)">
+            <summary>
+            Adds the specified document to the cache with an unlimited expiration and all document data. Future calls to LoadFromUri may return
+            this document (matched by URI).
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FactoryController.ReportPreCache(Leadtools.Services.Models.PreCache.ReportPreCacheRequest)">
+            <summary>
+            Returns all the entries in the pre-cache.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FactoryController.CheckCacheInfo(Leadtools.DocumentViewer.Models.Factory.CheckCacheInfoRequest)">
+            <summary>
+            Checks that the mimetype for an uploaded document is acceptable to load.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FactoryController.DownloadAnnotations(Leadtools.DocumentViewer.Models.Factory.DownloadAnnotationsRequest)">
+            <summary>
+            Downloads the annotations of a document for external use.
+            If no annotations exist, an empty XML file is returned.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FactoryController.DownloadDocument(Leadtools.DocumentViewer.Models.Factory.DownloadDocumentRequest)">
+            <summary>
+            Downloads a document (and possibly annotations) for external use.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FactoryController.DocumentsHeartbeat(Leadtools.DocumentViewer.Models.Factory.DocumentsHeartbeatRequest)">
+            <summary>
+             Sends a heartbeat signal to the documents.
+             Used to update the memory cache value for these documents
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FactoryController.SaveAttachmentToCache(Leadtools.DocumentViewer.Models.Factory.SaveAttachmentToCacheRequest)">
+            <summary>
+             Saves an attachment to the cache
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FactoryController.LoadDocumentAttachment(Leadtools.DocumentViewer.Models.Factory.LoadDocumentAttachmentRequest)">
+            <summary>
+             Loads an attachment document
+            </summary>
+        </member>
+        <member name="T:Leadtools.DocumentViewer.Controllers.FormFieldsController">
+            <summary>
+            Used for setting/getting form fields with external applications.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FormFieldsController.SetFormFields(Leadtools.DocumentViewer.Models.FormFields.SetFormFieldsRequest)">
+            <summary>
+             Sets FormFields into the document.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.FormFieldsController.SetFormFieldResources(Leadtools.DocumentViewer.Models.FormFields.SetFormFieldResourcesRequest)">
+            <summary>
+             Sets FormFields into the document.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.CompareController.GenerateReport(Leadtools.Services.Models.Compare.GenerateReportRequest)">
+            <summary>
+            Returns a report based on a DocumentDifference object.
+            </summary>
+            <param name="request">A <see cref="T:Leadtools.Services.Models.Compare.GenerateReportRequest">GenerateReportRequest</see> containing the report information.</param>
+            <returns>The report in the requested mime type</returns>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.CompareController.StringCompare(Leadtools.Services.Models.Compare.StringCompareRequest)">
+            <summary>
+            Compares two string objects.
+            </summary>
+            <param name="request">A <see cref="T:Leadtools.Services.Models.Compare.StringCompareRequest">StringCompareRequest</see> containing the string inputs.</param>
+            <returns>A list of text differences.</returns>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.CompareController.Run(Leadtools.Services.Models.Compare.RunCompareJobRequest)">
+            <summary>
+            Runs an asynchronous compare job
+            </summary>
+            <param name="request">A <see cref="T:Leadtools.Services.Models.Compare.RunCompareJobRequest">RunCompareJobRequest</see> containing the job data.</param>
+            <returns>A <see cref="T:Leadtools.Services.Models.Compare.RunCompareJobResponse">RunCompareJobResponse</see> containing cache information about the job.</returns>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.CompareController.Query(Leadtools.Services.Models.Compare.QueryCompareJobRequest)">
+            <summary>
+            Query the status of a running job
+            </summary>
+            <param name="request">A <see cref="T:Leadtools.Services.Models.Compare.QueryCompareJobRequest">QueryCompareJobRequest</see> containing a job's cache information.</param>
+            <returns>A <see cref="T:Leadtools.Services.Models.Compare.QueryCompareJobResponse">QueryCompareJobResponse</see> containing the current job information. </returns>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.CompareController.Delete(Leadtools.Services.Models.Compare.DeleteCompareJobRequest)">
+            <summary>
+            Deletes all information from the cache about a job
+            </summary>
+            <param name="request">A <see cref="T:Leadtools.Services.Models.Compare.DeleteCompareJobRequest">DeleteCompareJobRequest</see> containing a job's cache information.</param>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.CompareController.Abort(Leadtools.Services.Models.Compare.AbortCompareJobRequest)">
+            <summary>
+            Aborts a currently running job
+            </summary>
+            <param name="request">A <see cref="T:Leadtools.Services.Models.Compare.AbortCompareJobRequest">AbortCompareJobRequest</see> containing a job's cache information.</param>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.CompareController.CompareRasterPage(Leadtools.Services.Models.Compare.RasterCompareRequest)">
+            <summary>
+            Compares two DocumentPage images.
+            </summary>
+            <param name="request">A <see cref="T:Leadtools.Services.Models.Compare.RasterCompareRequest">RasterCompareRequest</see> containing raster compare information.</param>
+        </member>
+        <member name="T:Leadtools.DocumentViewer.Controllers.ImagesController">
+            <summary>
+            Used with the DocumentImages class of the LEADTOOLS Document JavaScript library.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.ImagesController.GetThumbnailsGrid(Leadtools.DocumentViewer.Models.Images.GetThumbnailsGridRequest)">
+            <summary>
+            Retrieves thumbnails as a grid, instead of as individual images.
+            The grid is determined by the page number range passed.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.ImagesController.LoadImageFile(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Loads an image and returns it in one of the specified formats.
+            </summary>
+            <param name="file">The source file.</param>
+            <returns>A stream containing the image data.</returns>
+        </member>
+        <member name="T:Leadtools.DocumentViewer.Controllers.PageController">
+            <summary>
+            Used with the DocumentPage class of the LEADTOOLS Document JavaScript library.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.PageController.#ctor">
+            <summary>
+            Controller Initializer
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.PageController.GetImage(Leadtools.DocumentViewer.Models.Page.GetImageRequest)">
+            <summary>
+            Gets the image for this page of the document - not as SVG.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.PageController.GetSvgBackImage(Leadtools.DocumentViewer.Models.Page.GetSvgBackImageRequest)">
+            <summary>
+            Gets the SVG back image if one exists for this document page's SVG. If not, returns the smallest possible GIF so the request 
+            does not fail.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.PageController.GetThumbnail(Leadtools.DocumentViewer.Models.Page.GetThumbnailRequest)">
+            <summary>
+            Gets a smaller version of this image for use as a thumbnail.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.PageController.GetSvg(Leadtools.DocumentViewer.Models.Page.GetSvgRequest)">
+            <summary>
+            Gets the page image as an SVG.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.PageController.GetText(Leadtools.DocumentViewer.Models.Page.GetTextRequest)">
+            <summary>
+              Retrieves the text for this document page, potentially through OCR.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.PageController.ReadBarcodes(Leadtools.DocumentViewer.Models.Page.ReadBarcodesRequest)">
+            <summary>
+            Reads any barcodes that may exist on this page.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.PageController.GetAnnotations(Leadtools.DocumentViewer.Models.Page.GetAnnotationsRequest)">
+            <summary>
+            Gets any annotations that may exist on this page.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.PageController.SetAnnotations(Leadtools.DocumentViewer.Models.Page.SetAnnotationsRequest)">
+            <summary>
+            Sets the annotations for this page.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.PageController.SetFormFields(Leadtools.DocumentViewer.Models.FormFields.SetFormFieldsRequest)">
+            <summary>
+            Sets the DocumentFormFields values.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.SharePointController.GetDocumentsListItems(Leadtools.DocumentViewer.Models.SharePoint.GetDocumentsListItemsRequest)">
+            <summary>
+              Returns a list of the items in this SharePoint folder.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.SharePointController.DownloadFile(Leadtools.DocumentViewer.Models.SharePoint.DownloadFileRequest)">
+            <summary>
+              Streams the requested file.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.SharePointController.UploadFile(Leadtools.DocumentViewer.Models.SharePoint.UploadFileRequest)">
+            <summary>
+              Uploads the supplied file via URI.
+            </summary>
+        </member>
+        <member name="T:Leadtools.DocumentViewer.Controllers.StatusJobConverterController">
+            <summary>
+            Used with the StatusJobDataRunner class of the LEADTOOLS Document JavaScript library. 
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.StatusJobConverterController.Run(Leadtools.Services.Models.StatusJobConverter.RunConvertJobRequest)">
+            <summary>
+            Runs the status job conversion specified by the conversion job data on the document.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.StatusJobConverterController.Query(Leadtools.Services.Models.StatusJobConverter.QueryConvertJobStatusRequest)">
+            <summary>
+            Queries the status of the conversion job.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.StatusJobConverterController.Delete(Leadtools.Services.Models.StatusJobConverter.DeleteConvertJobStatusRequest)">
+            <summary>
+            Deletes the status entry for the conversion job.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.StatusJobConverterController.Abort(Leadtools.Services.Models.StatusJobConverter.AbortConvertJobRequest)">
+            <summary>
+            Aborts the conversion job.
+            </summary>
+        </member>
+        <member name="T:Leadtools.DocumentViewer.Controllers.StructureController">
+            <summary>
+            Used with the DocumentStructure class of the LEADTOOLS Document JavaScript library.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.StructureController.ParseStructure(Leadtools.DocumentViewer.Models.Structure.ParseStructureRequest)">
+            <summary>
+            Parses the structure of the document; only needs to be called once per document.
+            </summary>
+        </member>
+        <member name="T:Leadtools.DocumentViewer.Controllers.TestController">
+            <summary>
+            Used with the DocumentFactory class of the LEADTOOLS Document JavaScript library.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.TestController.GetSampleFiles(Leadtools.Services.Models.Request)">
+            <summary>
+              Pings the service to ensure a connection, returning data about the status of the LEADTOOLS license.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.TestController.PostPing(Leadtools.Services.Models.Request)">
+            <summary> 
+              Pings the service to ensure a connection, returning data about the status of the LEADTOOLS license.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.TestController.GetPing(Leadtools.Services.Models.Request)">
+            <summary>
+              Pings the service to ensure a connection, returning data about the status of the LEADTOOLS license.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.TestController.PostHeartbeat(Leadtools.Services.Models.Request)">
+            <summary>
+              Pings the service to ensure a connection.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.TestController.GetHeartbeat(Leadtools.Services.Models.Request)">
+            <summary>
+              Pings the service to ensure a connection.
+            </summary>
+        </member>
+        <member name="M:Leadtools.DocumentViewer.Controllers.TestController.CheckUserData(Leadtools.Services.Models.Request)">
+            <summary>
+            A test method, not used, to show the use of "userData".
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.SetAnnotationsIBMRequest.DocumentId">
+            <summary>
+            The ID of the document to set annotations to.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.SetAnnotationsIBMRequest.Annotations">
+            <summary>
+            The annotation objects to convert.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.IBMAnnotation.Annotation">
+            <summary>
+            The IBM Annotation as an XML string.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.IBMAnnotation.Password">
+            <summary>
+            The password to lock the object with. If null or empty, it will not be used.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.IBMAnnotation.UserId">
+            <summary>
+            The user ID to associate with this IBM Annotation.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.GetAnnotationsIBMRequest.DocumentId">
+            <summary>
+            The ID of the document to get annotations history from.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.GetAnnotationsIBMResponse.Added">
+            <summary>
+            Dictionary of added IBM-P8 annotations (where the key is the annotation guid).
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.GetAnnotationsIBMResponse.Modified">
+            <summary>
+            Dictionary of modified IBM-P8 annotations (where the key is the annotation guid).
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.GetAnnotationsIBMResponse.Deleted">
+            <summary>
+            Dictionary of deleted IBM-P8 annotations (where the key is the annotation guid and value is null).
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.SetAnnotationsLEADRequest.DocumentId">
+            <summary>
+            The ID of the document to set annotations to.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.SetAnnotationsLEADRequest.Annotations">
+            <summary>
+            The annotation objects to convert.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.LEADAnnotation.Annotation">
+            <summary>
+            The LEAD Annotation as an XML string.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.LEADAnnotation.Password">
+            <summary>
+            The password to lock the object with. If null or empty, it will not be used.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.LEADAnnotation.UserId">
+            <summary>
+            The user ID to associate with this LEAD Annotation.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.GetAnnotationsLEADRequest.DocumentId">
+            <summary>
+            The ID of the document to get annotations history from.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.GetAnnotationsLEADResponse.Added">
+            <summary>
+            Dictionary of added LEAD annotations (where the key is the annotation guid).
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.GetAnnotationsLEADResponse.Modified">
+            <summary>
+            Dictionary of modified LEAD annotations (where the key is the annotation guid).
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.GetAnnotationsLEADResponse.Deleted">
+            <summary>
+            Dictionary of deleted LEAD annotations (where the key is the annotation guid and value is null).
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.SetAnnotationsRequest.DocumentId">
+            <summary>
+            The ID of the document to set annotations to.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.SetAnnotationsRequest.Annotations">
+            <summary>
+            The annotation objects to convert.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.Annotation.Data">
+            <summary>
+            Any LEAD compatible annotation as a string.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.Annotation.Password">
+            <summary>
+            The password to lock the object with. If null or empty, it will not be used.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.Annotation.UserId">
+            <summary>
+            The user ID to associate with this Annotation.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.GetAnnotationsRequest.DocumentId">
+            <summary>
+            The ID of the document to get annotations history from.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.GetAnnotationsResponse.Added">
+            <summary>
+            Dictionary of added LEAD annotations (where the key is the annotation guid).
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.GetAnnotationsResponse.Modified">
+            <summary>
+            Dictionary of modified LEAD annotations (where the key is the annotation guid).
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Annotations.GetAnnotationsResponse.Deleted">
+            <summary>
+            Dictionary of deleted LEAD annotations (where the key is the annotation guid and value is null).
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.PingResponse.Message">
+            <summary>
+            A simple message, for testing.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.PingResponse.Time">
+            <summary>
+            The current time, so the user may tell if it was cached.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.PingResponse.IsLicenseChecked">
+            <summary>
+            Whether or not the license was able to be checked.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.PingResponse.IsLicenseExpired">
+            <summary>
+            Whether or not the license is expired.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.PingResponse.KernelType">
+            <summary>
+            The type of kernel - evaluation, for example.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.PingResponse.IsCacheAccessible">
+            <summary>
+            Whether the cache was accessed successfully.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.PingResponse.CacheManagerName">
+            <summary>
+            Name of the current cache manager
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.PingResponse.CacheNames">
+            <summary>
+            Cache names, separated by comma
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.PingResponse.OcrEngineStatus">
+            <summary>
+            The value of the OCREngineStatus enumeration indicating the OCR Engine Status.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.PingResponse.ServiceName">
+            <summary>
+            Service name
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.PingResponse.ServicePlatform">
+            <summary>
+            Service platform
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.PingResponse.ServiceOperatingSystem">
+            <summary>
+            Service platform
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.PingResponse.ServiceVersion">
+            <summary>
+            The service version.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.PingResponse.KernelVersion">
+            <summary>
+            The kernel version.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.PingResponse.MultiplatformSupportStatus">
+            <summary>
+            The multi-platform support.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.PingResponse.IsMultimediaCacheAvailable">
+            <summary>
+            Whether the multimedia cache is available.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.PingResponse.IsMP4ConverterAvailable">
+            <summary>
+            Whether or not the MP4 converter is avalaible.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.PingResponse.IsMP4ConverterLicensed">
+            <summary>
+            Whether or not the MP4 converter is licensed.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.PingResponse.IsSharepointSupported">
+            <summary>
+            Whether or not the MP4 converter is licensed.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.HeartbeatResponse.Time">
+            <summary>
+            The current time, so the user may tell if it was cached.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Test.SampleFilesResponse.Files">
+            <summary>
+            The current time, so the user may tell if it was cached.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.LoadFromCacheRequest.DocumentId">
+            <summary>
+            The ID to load from the cache (which must be retrieved from an item after LoadFromUri was called, and saved).
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.LoadFromCacheResponse.Document">
+            <summary>
+            The serialized LEADDocument instance.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.LoadFromUriRequest.Options">
+            <summary>
+            The options to use when loading this document (serialized Leadtools.Document.LoadDocumentOptions instance).
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.LoadFromUriRequest.Uri">
+            <summary>
+            The URI to the document to be loaded.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.LoadFromUriRequest.Resolution">
+            <summary>
+            The resolution to load the document at. To use the default, pass 0.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.LoadFromUriRequest.LoadPreCached">
+            <summary>
+            If this document is pre-cached, load it directly and do not automatically clone it
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.LoadFromUriResponse.Document">
+            <summary>
+            The serialized LEADDocument instance.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.BeginUploadRequest.DocumentId">
+            <summary>
+            The ID to use for the new document, or null to create a new random DocumentId.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.BeginUploadRequest.Options">
+            <summary>
+            The options to use for uploading the document.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.BeginUploadResponse.UploadUri">
+            <summary>
+            The URI of the uploaded document in the cache.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.UploadDocumentRequest.Uri">
+            <summary>
+            The uri, retrieved from BeginUpload, that is used for uploading.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.UploadDocumentRequest.Data">
+            <summary>
+            The data to upload as Base64 string. If this value is null, then Buffer is used.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.UploadDocumentRequest.Buffer">
+            <summary>
+            The data to upload. The length of this buffer must be set in BufferLength. If this value is null, then Data is used.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.UploadDocumentRequest.BufferLength">
+            <summary>
+            The length of Buffer in bytes.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.UploadDocumentBlobRequest.Uri">
+            <summary>
+            The uri, retrieved from BeginUpload, that is used for uploading.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.EndUploadRequest.Uri">
+            <summary>
+            The uri, retrieved from BeginUpload, that is used for uploading.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.AbortUploadDocumentRequest.Uri">
+            <summary>
+            The URI from BeginUpload to stop loading to.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.GetCacheStatisticsResponse.Statistics">
+            <summary>
+            The cache statistics information (serialized Leadtools.Caching.CacheStatistics)
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.SaveToCacheRequest.Descriptor">
+            <summary>
+            The data to use when creating or saving this document - a serialized instance of Leadtools.Document.DocumentDescriptor.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.SaveToCacheResponse.Document">
+            <summary>
+            The serialized LEADDocument instance.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.CloneDocumentRequest.DocumentId">
+            <summary>
+            The ID of the source document to clone
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.CloneDocumentRequest.CloneDocumentId">
+            <summary>
+            The ID of the target cloned document (optional)
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.CloneDocumentRequest.DeleteSourceDocument">
+            <summary>
+            Delete the source document on success.
+            If this is true, then this method will perform a move operation. Otherwise, this is a copy operation
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.CloneDocumentRequest.TargetCacheName">
+            <summary>
+            Optional target cache name if the service supports multiple cashes
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.CloneDocumentResponse.Document">
+            <summary>
+            The cloned document
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.DeleteRequest.DocumentId">
+            <summary>
+            The document to delete.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.DeleteRequest.AllowNonExisting">
+            <summary>
+            Do not throw an exception if the document does not exist in the cache
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.DeleteRequest.DeletePreCached">
+            <summary>
+            Delete this document even if it was pre-cached
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.CheckCacheInfoRequest.Uri">
+            <summary>
+            The URI to the document to verify the mimetype for. This may be a cache URI.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.CacheInfo.IsVirtual">
+            <summary>
+            Whether or not the document is virtual.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.CacheInfo.IsLoaded">
+            <summary>
+            Whether or not the document is loaded already.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.CacheInfo.HasAnnotations">
+            <summary>
+            Whether or not the document has annotations.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.CacheInfo.Name">
+            <summary>
+            The document name, if one is set.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.CacheInfo.MimeType">
+            <summary>
+            The reported mimeType of the document.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.CacheInfo.IsMimeTypeAccepted">
+            <summary>
+            Whether or not the mimeType is acceptable.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.CacheInfo.PageCount">
+            <summary>
+            The page count of the document.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.CacheInfo.UserToken">
+            <summary>
+            Document user token.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.CacheInfo.HasUserToken">
+            <summary>
+            Indicate that the document has a user token
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.CacheInfo.IsUsingMemoryCache">
+            <summary>
+            Indicate that this document uses the document memory cache
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.CacheInfo.CacheName">
+            <summary>
+            The cache name
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.CheckCacheInfoResponse.CacheInfo">
+            <summary>
+            The cache info for the document. If null, the document does not exist.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.DownloadAnnotationsRequest.DocumentId">
+            <summary>
+            The ID of the annotations in the cache to download. Cannot be used if URI is used.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.DownloadAnnotationsRequest.Uri">
+            <summary>
+            The URI to the annotations to download. Cannot be used if ID is used.
+            This may be a cache URI.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.DownloadAnnotationsRequest.ContentDisposition">
+            <summary>
+            Content disposition
+            This is optional, if the value is null or empty, then the response Content-Disposition header will be set to either attachment or inline depending on the mime file type.
+            Otherwise, it will be set to this value.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.DownloadDocumentRequest.DocumentId">
+            <summary>
+            The ID of the document in the cache to download. Cannot be used if URI is used.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.DownloadDocumentRequest.Uri">
+            <summary>
+            The URI to the document to download. Cannot be used if ID is used.
+            This may be a cache URI.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.DownloadDocumentRequest.IncludeAnnotations">
+            <summary>
+            If true, external annotations will be returned as well (the result will be a ZIP).
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.DownloadDocumentRequest.ContentDisposition">
+            <summary>
+            Content disposition
+            This is optional, if the value is null or empty, then the response Content-Disposition header will be set to either attachment or inline depending on the mime file type.
+            Otherwise, it will be set to this value.
+            For instance, if this document is a PDF, then by default Content-Disposition will be set to inline since the mime type is viewable in the browser. This allows the user to open the
+            document directly in the browser.
+            To force downloading, set the value of Content-Disposition to "attachment".
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.DownloadDocumentRequest.FileName">
+            <summary>
+            Filename
+            This is optional. If the value is null or empty then downloaded filename will be "LEADDocument.Name.ext", where the extension is obtained form the document mime type.
+            Otherwise, then downloaded filename will be "fileName.ext", where the extension is obtained form the document mime type.
+            Notes:
+            The value must be ASCII otherwise it will not be used.
+            If the value contains an extension and it does not match the extension obtained from the document mime type, then filename.oldext.ext is used.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.DownloadDocumentRequest.SignDocument">
+            <summary>
+            If true, the final pdf document will be digitally signed.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.DocumentsHeartbeatRequest.DocumentIds">
+            <summary>
+            IDs of document to signal that they are still alive.
+            Used by document memory cache
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.SaveAttachmentToCacheRequest.DocumentId">
+            <summary>
+            The ID of the attachment in the cache to download. Cannot be used if URI is used.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.SaveAttachmentToCacheRequest.Options">
+            <summary>
+            The options to identity the attachment and its upload options
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.SaveAttachmentToCacheResponse.UploadUri">
+            <summary>
+            The URI of the uploaded document in the cache
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.LoadDocumentAttachmentRequest.DocumentId">
+            <summary>
+            The ID of the owner document
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Factory.LoadDocumentAttachmentRequest.Options">
+            <summary>
+            Options to use when loading the attachment
+            </summary>
+        </member>
+        <member name="F:Leadtools.DocumentViewer.Models.Factory.LoadDocumentAttachmentResponse.Document">
+            <summary>
+            The serialized attachment LEADDocument instance
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.FormFields.SetFormFieldsRequest.DocumentId">
+            <summary>
+            The ID of the document to edit.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.FormFields.SetFormFieldsRequest.FormFieldsContainers">
+            <summary>
+            The Document form fields containers
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.FormFields.SetFormFieldResourcesRequest.DocumentId">
+            <summary>
+            The ID of the document to edit.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.FormFields.SetFormFieldResourcesRequest.FormFieldResources">
+            <summary>
+            The Document form fields containers
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Images.GetThumbnailsGridRequest.DocumentId">
+            <summary>
+            The document to get thumbnails from.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Images.GetThumbnailsGridRequest.FirstPageNumber">
+            <summary>
+            The first page number to use. If unspecified, 1 is used.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Images.GetThumbnailsGridRequest.LastPageNumber">
+            <summary>
+            The last page number to use. If unspecified, the last page is used.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Images.GetThumbnailsGridRequest.MimeType">
+            <summary>
+            Optional - the mimetype to use for the images.
+            Not currently sent by the Leadtools.Document.JavaScript library.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Images.GetThumbnailsGridRequest.MaximumGridWidth">
+            <summary>
+            The maximum width for the grid.
+            The number of columns is determined by dividing this value by the width.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Images.GetThumbnailsGridRequest.Width">
+            <summary>
+            The width of an individual image of the grid. Images are resized to fit
+            within the width and height provided.
+            The width is used along with maximumGirdWidth to determine the columns.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Images.GetThumbnailsGridRequest.Height">
+            <summary>
+            The height of an individual image of the grid. Images are resized to fit
+            within the width and height provided.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetImageRequest.DocumentId">
+            <summary>
+            The document to get the image from.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetImageRequest.PageNumber">
+            <summary>
+            The page from which to get the image.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetImageRequest.Resolution">
+            <summary>
+            The resolution of the image to use, if different from the default.
+            Optional; not currently sent by the Leadtools.Document.JavaScript library.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetImageRequest.MimeType">
+            <summary>
+            The mimetype to load the image as.
+            Optional; not currently sent by the Leadtools.Document.JavaScript library.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetImageRequest.BitsPerPixel">
+            <summary>
+            The bits per pixel value to use.
+            Optional; not currently sent by the Leadtools.Document.JavaScript library.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetImageRequest.QualityFactor">
+            <summary>
+            The quality factor used for rendering the image.
+            Optional; not currently sent by the Leadtools.Document.JavaScript library.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetImageRequest.Width">
+            <summary>
+            The width of the image to return.
+            Optional; not currently sent by the Leadtools.Document.JavaScript library.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetImageRequest.Height">
+            <summary>
+            The height of the image to return.
+            Optional; not currently sent by the Leadtools.Document.JavaScript library.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetSvgBackImageRequest.DocumentId">
+            <summary>
+            The document from which to load the back image.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetSvgBackImageRequest.PageNumber">
+            <summary>
+            The page number to load the back image from.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetSvgBackImageRequest.BackColor">
+            <summary>
+            The color to use as the background color, such as "transparent".
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetSvgBackImageRequest.Resolution">
+            <summary>
+            The resolution to use.
+            Optional; not currently sent by the Leadtools.Document.JavaScript library.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetSvgBackImageRequest.MimeType">
+            <summary>
+            The mimetype to load with.
+            Optional; not currently sent by the Leadtools.Document.JavaScript library.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetSvgBackImageRequest.BitsPerPixel">
+            <summary>
+            The bits per pixel to use.
+            Optional; not currently sent by the Leadtools.Document.JavaScript library.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetSvgBackImageRequest.QualityFactor">
+            <summary>
+            The quality factor to use.
+            Optional; not currently sent by the Leadtools.Document.JavaScript library.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetSvgBackImageRequest.Width">
+            <summary>
+            The width to use for the image.
+            Optional; not currently sent by the Leadtools.Document.JavaScript library.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetSvgBackImageRequest.Height">
+            <summary>
+            The height to use for the image.
+            Optional; not currently sent by the Leadtools.Document.JavaScript library.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetThumbnailRequest.DocumentId">
+            <summary>
+            The ID of the document to get the thumbnail from.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetThumbnailRequest.PageNumber">
+            <summary>
+            The page number of the thumbnail.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetThumbnailRequest.MimeType">
+            <summary>
+            The mimetype to use for the thumbnail.
+            Optional; not currently sent by the Leadtools.Document.JavaScript library.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetThumbnailRequest.Width">
+            <summary>
+            The width to return for the thumbnail.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetThumbnailRequest.Height">
+            <summary>
+            The height to return for the thumbnail.
+            </summary>
+        </member>
+        <member name="T:Leadtools.DocumentViewer.Models.Page.DocumentGetSvgOptions">
+            <summary>
+            An enumeration used for determining how to return an SVG from the service.
+            </summary>
+        </member>
+        <member name="F:Leadtools.DocumentViewer.Models.Page.DocumentGetSvgOptions.AllowPolylineText">
+            <summary>
+            Should polyline text be allowed?
+            </summary>
+        </member>
+        <member name="F:Leadtools.DocumentViewer.Models.Page.DocumentGetSvgOptions.ForceTextPath">
+            <summary>
+            The created svg will have the text as paths. Default is the output file may have text as both text spans and path objects depending on the input document. Currently
+            supported by PDF documents only
+            </summary>
+        </member>
+        <member name="F:Leadtools.DocumentViewer.Models.Page.DocumentGetSvgOptions.DropImages">
+            <summary>
+            Should any images be dropped?
+            </summary>
+        </member>
+        <member name="F:Leadtools.DocumentViewer.Models.Page.DocumentGetSvgOptions.DropShapes">
+            <summary>
+            Should any shapes be dropped?
+            </summary>
+        </member>
+        <member name="F:Leadtools.DocumentViewer.Models.Page.DocumentGetSvgOptions.DropText">
+            <summary>
+            Should any text be dropped?
+            </summary>
+        </member>
+        <member name="F:Leadtools.DocumentViewer.Models.Page.DocumentGetSvgOptions.ForConversion">
+            <summary>
+            Is this SVG for conversion?
+            </summary>
+        </member>
+        <member name="F:Leadtools.DocumentViewer.Models.Page.DocumentGetSvgOptions.IgnoreXmlParsingErrors">
+            <summary>
+            Should XML parsing errors be ignored?
+            </summary>
+        </member>
+        <member name="F:Leadtools.DocumentViewer.Models.Page.DocumentGetSvgOptions.ForceRealText">
+            <summary>
+            The created svg will have the text as real text spans. Default is the output file may have text as both text spans and path objects depending on the input document.
+            Currently supported by PDF documents only
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetSvgRequest.DocumentId">
+            <summary>
+            The ID of the document to load the SVG from.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetSvgRequest.PageNumber">
+            <summary>
+            The page number from which to load the SVG.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetSvgRequest.Options">
+            <summary>
+            The SVG options.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetSvgRequest.UnembedImages">
+            <summary>
+            If true, images will be unembedded.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetTextRequest.DocumentId">
+            <summary>
+            The ID of the document to get text for.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetTextRequest.PageNumber">
+            <summary>
+            The number of the page text should be parsed from.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetTextRequest.Clip">
+            <summary>
+            Clipping rectangle, of type Leadtools.LeadRectD. Use LeadRectD.Empty to get the text for the whole page.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetTextRequest.TextExtractionMode">
+            <summary>
+            The type of text extraction to use (serialized Leadtools.Document.DocumentTextExtractionMode)
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetTextRequest.ImagesRecognitionMode">
+            <summary>
+            The type of text extraction to use (serialized Leadtools.Document.DocumentTextExtractionMode)
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetTextRequest.BuildWords">
+            <summary>
+            Build and populate DocumentPageText.Words in the response PageText
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetTextRequest.BuildText">
+            <summary>
+            Build and populate DocumentPageText.Text in the response PageText
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetTextRequest.BuildTextWithMap">
+            <summary>
+            Build and populate DocumentPageText.TextMap in the response PageText
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetTextResponse.PageText">
+            <summary>
+            The page text that was processed (serialized Leadtools.Document.DocumentPageText).
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.ReadBarcodesRequest.DocumentId">
+            <summary>
+            The ID of the document to read barcodes from.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.ReadBarcodesRequest.PageNumber">
+            <summary>
+            The page number of the barcodes.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.ReadBarcodesRequest.Bounds">
+            <summary>
+            The bounds in which to check for barcodes (serialized Leadtools.LeadRectD).
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.ReadBarcodesRequest.MaximumBarcodes">
+            <summary>
+            The maximum number of barcodes to read (0 for all).
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.ReadBarcodesRequest.Symbologies">
+            <summary>
+            The list of symbologies to check against. If null, all known symbologies will be tested (array of serialized Leadtools.Barcode.BarcodeSymbology)
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.ReadBarcodesResponse.Barcodes">
+            <summary>
+            The found barcodes (array of serialized Leadtools.Barcode.BarcodeData)
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetAnnotationsRequest.DocumentId">
+            <summary>
+            The ID of the document to get annotations from.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetAnnotationsRequest.PageNumber">
+            <summary>
+            The page number of the document.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetAnnotationsRequest.CreateEmpty">
+            <summary>
+            If true, empty annotations will be created if none existed for the page.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.GetAnnotationsResponse.Annotations">
+            <summary>
+            The annotations, as a string.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.SetAnnotationsRequest.DocumentId">
+            <summary>
+            The ID of the document to set annotations for.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.SetAnnotationsRequest.PageNumber">
+            <summary>
+            The page number.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Page.SetAnnotationsRequest.Annotations">
+            <summary>
+            The annotations, as a string.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.SharePoint.GetDocumentsListItemsRequest.ServerProperties">
+            <summary>
+            The SharePoint server properties.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.SharePoint.GetDocumentsListItemsRequest.FolderUri">
+            <summary>
+            The folder to retrieve a list of items for.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.SharePoint.GetDocumentsListItemsResponse.Items">
+            <summary>
+            The SharePoint server directory items.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.SharePoint.DownloadFileRequest.ServerProperties">
+            <summary>
+            The SharePoint server properties.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.SharePoint.DownloadFileRequest.FileUri">
+            <summary>
+            The uri of the file to download.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.SharePoint.DownloadFileResponse.Data">
+            <summary>
+            The file as a base64 string
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.SharePoint.UploadFileRequest.ServerProperties">
+            <summary>
+            The SharePoint server properties.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.SharePoint.UploadFileRequest.FileUri">
+            <summary>
+            The URI of the file to upload.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.SharePoint.UploadFileRequest.Name">
+            <summary>
+            The name to use with the uploaded file.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.SharePoint.UploadFileRequest.FolderUri">
+            <summary>
+            The destination of the uploaded file.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.SharePoint.SharePointServerProperties.Uri">
+            <summary>
+            The server URI passed by the user.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.SharePoint.SharePointServerProperties.UseCredentials">
+            <summary>
+            Whether to use network credentials when connecting to the server.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.SharePoint.SharePointServerProperties.UserName">
+            <summary>
+            The credentials user name (if using credentials).
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.SharePoint.SharePointServerProperties.Password">
+            <summary>
+            The credentials password (if using credentials).
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.SharePoint.SharePointServerProperties.Domain">
+            <summary>
+            The credentials domain (if using credentials).
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.SharePoint.SharePointItem.Name">
+            <summary>
+            The name of the file/folder.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.SharePoint.SharePointItem.Type">
+            <summary>
+            The type of the item (from Microsoft.SharePoint.Client.FileSystemObjectType - Invalid,File,Folder,Web)
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Structure.ParseStructureRequest.DocumentId">
+            <summary>
+            The document to parse.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Structure.ParseStructureRequest.ParseBookmarks">
+            <summary>
+            Whether or not to parse bookmarks from the document.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Structure.ParseStructureRequest.ParsePageLinks">
+            <summary>
+            Whether or not to parse bookmarks from the document.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Structure.ParseStructureResponse.Bookmarks">
+            <summary>
+            The bookmarks that exist for the document (serialized array of Leadtools.Document.DocumentBookmark).
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Structure.ParseStructureResponse.PageLinks">
+            <summary>
+            The page links that exist on the document (serialized array of array of Leadtools.Document.DocumentLink).
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Multimedia.GetVideoRequest.url">
+            <summary>
+            The url to retrieve the video.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Multimedia.GetVideoRequest.mime">
+            <summary>
+            The preferred video mime type.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Multimedia.ConvertVideoRequest.url">
+            <summary>
+            The url to retrieve the video.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Multimedia.ConvertVideoRequest.mime">
+            <summary>
+            The target video mime type.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Multimedia.ConvertVideoRequest.operation">
+            <summary>
+            Specifies the operation to perform. THis is used to upload the video in chunks.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Multimedia.ConvertVideoResponse.url">
+            <summary>
+            The cache url to retrieve the video.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Multimedia.DeleteCachedVideoRequest.url">
+            <summary>
+            The cached video url to delete.
+            </summary>
+        </member>
+        <member name="P:Leadtools.DocumentViewer.Models.Multimedia.DeleteCachedVideoRequest.mime">
+            <summary>
+            The mime type of the video to remove. If not specifiied, then all cached mime types for this video will be removed.
+            </summary>
+        </member>
+        <member name="T:Leadtools.Services.Models.Request">
+            <summary>
+            A base request type that all other requests derive from.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Request.UserData">
+            <summary>
+            Any arbitrary data the user may wish to pass along through the LEADTOOLS Document library to the service.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Request.DocumentUserToken">
+            <summary>
+            An optional token that can be passed through the LEADTOOLS Document Library to unlock user-restricted documents.
+            </summary>
+        </member>
+        <member name="T:Leadtools.Services.Models.Response">
+            <summary>
+            A base response type that all other responses derive from.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Response.UserData">
+            <summary>
+            Any arbitrary data the user may wish to pass along from the service through the LEADTOOLS Document library.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.DecryptRequest.DocumentId">
+            <summary>
+            The document's identification number.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.DecryptRequest.Password">
+            <summary>
+            The attempted password for the document.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.DecryptResponse.Document">
+            <summary>
+            The decrypted document's information.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.ConvertRequest.DocumentId">
+            <summary>
+            The ID of the document to convert.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.ConvertRequest.JobData">
+            <summary>
+            The relevant job data that will be used to understand the conversion needed.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.ConvertItem.Name">
+            <summary>
+            The user-friendly name of the item being returned, for downloading.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.ConvertItem.Url">
+            <summary>
+            The URL of the item being returned, for downloading.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.ConvertItem.MimeType">
+            <summary>
+            The mimetype of the converted item.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.ConvertItem.Length">
+            <summary>
+            The file length, in bytes, of the converted item.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.ConvertResponse.DocumentId">
+            <summary>
+            The cache ID of the item (only used for documents)
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.ConvertResponse.Archive">
+            <summary>
+            If the item had to be served as one archived file, it exists here.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.ConvertResponse.Document">
+            <summary>
+            The newly converted document, if it was not archived.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.ConvertResponse.Annotations">
+            <summary>
+            The converted annotations, if not archived.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.GetHistoryRequest.DocumentId">
+            <summary>
+            The ID of the document to get the history of.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.GetHistoryRequest.ClearHistory">
+            <summary>
+            Whether or not to clear the history after retrieving it.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.GetHistoryResponse.Items">
+            <summary>
+            The document history items.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.CompareRequest.DocumentIds">
+            <summary>
+            The IDs of the documents to compare.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.CompareRequest.Options">
+            <summary>
+            The options to use when comparing
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.CompareResponse.DocumentDifference">
+            <summary>
+            The IDs of the documents to compare.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.GetDocumentEditableContentRequest.DocumentId">
+            <summary>
+            The ID of the document to edit.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.SetDocumentEditableContentRequest.DocumentId">
+            <summary>
+            The ID of the document to edit.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.SetDocumentEditableContentRequest.EditableContent">
+            <summary>
+            The editable content for the document editor.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.ConvertDocumentEditableContentRequest.DocumentId">
+            <summary>
+            The ID of the document to edit.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.ConvertDocumentEditableContentRequest.EditableContentUri">
+            <summary>
+            The updated editable content.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.ConvertDocumentEditableContentRequest.DocumentName">
+            <summary>
+            The document name.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Document.ConvertDocumentEditableContentRequest.DocumentFormat">
+            <summary>
+            The Document format to use
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Analytics.GetActionSetsResponse.ActionSets">
+            <summary>
+            The forms found on the server
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Analytics.GetRuleSetsResponse.RuleSets">
+            <summary>
+            The forms found on the server
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.PreCacheDocumentRequest.Uri">
+            <summary>
+            The URI to the document to be pre-cached.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.PreCacheDocumentRequest.ExpiryDate">
+            <summary>
+            The date this document will be expired. If null, then the document will never expire.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.PreCacheDocumentRequest.CacheOptions">
+            <summary>
+            The parts of the document to pre-cache. If None (default value), then DocumentCacheOptions.All is used.
+            Array of serialized Leadtools.Document.DocumentCacheOptions.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.PreCacheDocumentRequest.MaximumImagePixelSizes">
+            <summary>
+            The maximum pixel size values to use when pre-caching images. If null, then 4096 and 2048 are used.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.PreCacheDocumentRequest.FirstPageNumber">
+            <summary>
+            Page number where pre-caching starts. 0 to start at the first page
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.PreCacheDocumentRequest.LastPageNumber">
+            <summary>
+            Page number where pre-caching stops. 0 or -1 to stop at the last page
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.PreCacheDocumentRequest.Passcode">
+            <summary>
+            A simple passcode to restrict others from pre-caching. For production, use a more advanced authorization system.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.PreCacheDocumentResponse.Item">
+            <summary>
+            The pre-cache response item.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.ReportPreCacheRequest.Clear">
+            <summary>
+            Choose whether to delete all pre-cache entries.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.ReportPreCacheRequest.Clean">
+            <summary>
+            Choose whether to remove pre-cache entries that don't have a matching cache entry.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.ReportPreCacheRequest.Passcode">
+            <summary>
+            A simple passcode to restrict others from receiving a pre-cache report. For production, use a more advanced authorization system.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.ReportPreCacheResponse.Entries">
+            <summary>
+            An array of the pre-cache entries stored in the pre-cache.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.ReportPreCacheResponse.Removed">
+            <summary>
+            An array of the pre-cache document items that were removed.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.PreCacheResponseItem.Uri">
+            <summary>
+            The value of the URI for the pre-cache document, as a string.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.PreCacheResponseItem.Items">
+            <summary>
+            The pre-cached items.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.PreCacheResponseItem.RegionHash">
+            <summary>
+            The mapped hashkey of the pre-cache entry from the request URI.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.PreCacheResponseSizeItem.DocumentId">
+            <summary>
+            The mapped documentId of the cached document.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.PreCacheResponseSizeItem.MaximumImagePixelSize">
+            <summary>
+            The value of MaximumImagePixelSize
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.PreCacheResponseSizeItem.Seconds">
+            <summary>
+            The time it took to pre-cache the document, if relevant to the operation.
+            Else it will be zero.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.PreCacheResponseSizeItem.Reads">
+            <summary>
+            The times this item has been accessed, if relevant to the operation.
+            Else it will be zero.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.PreCacheEntry.DocumentId">
+            <summary>
+             The stored identifier for the document.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.PreCacheEntry.MaximumImagePixelSize">
+            <summary>
+            The maximum pixel size of pages for this cached document instance.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.PreCache.PreCacheEntry.Reads">
+            <summary>
+            The number of times this cache item has been read with the intention of loading.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.StatusJobConverter.RunConvertJobRequest.DocumentId">
+            <summary>
+            The ID of the document to convert.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.StatusJobConverter.RunConvertJobRequest.JobData">
+            <summary>
+            The relevant job data that will be used to understand the conversion needed.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.StatusJobConverter.RunConvertJobResponse.UserToken">
+            <summary>
+            The user token (region) for the job.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.StatusJobConverter.RunConvertJobResponse.JobToken">
+            <summary>
+            The job token (key) for the job.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.StatusJobConverter.QueryConvertJobStatusRequest.UserToken">
+            <summary>
+            The user token (region) for the job.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.StatusJobConverter.QueryConvertJobStatusRequest.JobToken">
+            <summary>
+            The job token (key) for the job.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.StatusJobConverter.QueryConvertJobStatusResponse.jobData">
+            <summary>
+            All data depicting the status of the job.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.StatusJobConverter.DeleteConvertJobStatusRequest.UserToken">
+            <summary>
+            The user token (region) for the job.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.StatusJobConverter.DeleteConvertJobStatusRequest.JobToken">
+            <summary>
+            The job token (key) for the job.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.StatusJobConverter.AbortConvertJobRequest.UserToken">
+            <summary>
+            The user token (region) for the job.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.StatusJobConverter.AbortConvertJobRequest.JobToken">
+            <summary>
+            The job token (key) for the job.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.GenerateReportRequest.Mimetype">
+            <summary>
+            The mimetype for the report. 
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.GenerateReportRequest.Options">
+            <summary>
+            The options to use when generating the report
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.GenerateReportRequest.Differences">
+            <summary>
+            The DocumentDifference object to generate the report based off of.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.CompareRequest.DocumentIds">
+            <summary>
+            The IDs of the documents to compare.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.CompareRequest.Options">
+            <summary>
+            The options to use when comparing
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.CompareResponse.DocumentDifference">
+            <summary>
+            The IDs of the documents to compare.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.StringCompareRequest.Inputs">
+            <summary>
+            The IDs of the documents to compare.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.StringCompareRequest.Options">
+            <summary>
+            The options to use when comparing
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.StringCompareResponse.TextDifferences">
+            <summary>
+            The IDs of the documents to compare.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RunCompareJobRequest.JobData">
+            <summary>
+            The IDs of the documents to compare.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.QueryCompareJobResponse.JobData">
+            <summary>
+            The IDs of the documents to compare.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.OriginalDocumentId">
+            <summary>
+            The document ID for the original document.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.OriginalPageNumber">
+            <summary>
+            The page number in the original document to compare.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.OriginalOffset">
+            <summary>
+            The Offset for the original document page
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.OriginalRotationAngle">
+            <summary>
+            The angle to rotate the page.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.ModifiedDocumentId">
+            <summary>
+            The document ID for the Modified document.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.ModifiedPageNumber">
+            <summary>
+            The page number in the Modified document to compare.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.ModifiedOffset">
+            <summary>
+            The Offset for the Modified document page
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.ModifiedRotationAngle">
+            <summary>
+            The angle to rotate the page.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.Threshold">
+            <summary>
+            Threshold value to use when comparing pixel color values.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.OriginalBackground">
+            <summary>
+            The expected background color in the original image
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.OriginalForeground">
+            <summary>
+            The expected foreground color in the original image
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.ModifiedBackground">
+            <summary>
+            The background color in the modified image.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.ModifiedForeground">
+            <summary>
+            The forground color in the modified image
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.OutputExternal">
+            <summary>
+            The color for external sections in the output image
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.OutputBackground">
+            <summary>
+            The color for the background in the output image
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.OutputMatch">
+            <summary>
+            The color for matching sections in the output image.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.OutputAddition">
+            <summary>
+            The color for added sections in the output image
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.OutputDeletion">
+            <summary>
+            The color for deleted sections in the output image
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.OutputChange">
+            <summary>
+            The color for changed sections in the output image
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.OutputDocumentId">
+            <summary>
+            Optional: The document ID for the output document.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareRequest.OutputDocumentName">
+            <summary>
+            Optional: The output document name
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.RasterCompareResponse.OutputDocumentId">
+            <summary>
+            ID to the output document generated.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.GetCompareImageRequest.DocumentId">
+            <summary>
+            The document to get the image from.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.GetCompareImageRequest.PageNumber">
+            <summary>
+            The page from which to get the image.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.GetCompareImageRequest.BackgroundColor">
+            <summary>
+            Background color to set.
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Models.Compare.GetCompareImageRequest.ForegroundColor">
+            <summary>
+            Foreground color to set.
+            </summary>
+        </member>
+        <member name="T:Leadtools.Services.Tools.Cache.DefaultCacheManager">
+            <summary>
+            Default implementation of ICacheManager that has a single CacheObject from the service config
+            </summary>
+        </member>
+        <member name="T:Leadtools.Services.Tools.Cache.HybridMemoryFileCacheManager">
+            <summary>
+            An example of a Hybrid Memory/File cache manager
+            </summary>
+            <remarks>
+            <para>Documents with size larger than MemoryCacheMaximumDataLength will go into the SerializableMemoryCache.</para>
+            <para>Documents with size smaller than MemoryCacheMaximumDataLength will go into FileCache</para>
+            </remarks>
+        </member>
+        <member name="T:Leadtools.Services.Tools.Cache.ICacheManager">
+            <summary>
+            All cache operations are redirected to an implementation of this class
+            Supports multiple caches
+            </summary>
+        </member>
+        <member name="P:Leadtools.Services.Tools.Cache.ICacheManager.Name">
+            <summary>
+            Get the name of this multi-cache manager system
+            </summary>
+        </member>
+        <member name="M:Leadtools.Services.Tools.Cache.ICacheManager.GetCacheNames">
+            <summary>
+            Return all the cache names supported by this manager
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Leadtools.Services.Tools.Cache.ICacheManager.IsInitialized">
+            <summary>
+            Checks whether this cache manager is initialized correctly and ready to be used
+            </summary>
+        </member>
+        <member name="M:Leadtools.Services.Tools.Cache.ICacheManager.Initialize">
+            <summary>
+            Initializes the ICacheManager from a configuration file, creating as many ObjectCache implementations as the configurations indicates
+            This is called from service startup
+            </summary>
+        </member>
+        <member name="M:Leadtools.Services.Tools.Cache.ICacheManager.Cleanup">
+            <summary>
+            Cleanup the ICacheManager. Called when
+            This is called from service shutdown
+            </summary>
+        </member>
+        <member name="M:Leadtools.Services.Tools.Cache.ICacheManager.CheckCacheAccess(System.String)">
+            <summary>
+            Checks that all configured caches are accessible
+            </summary>
+            <param name="cacheName">Cache name to check. If NULL, then all caches.</param>
+        </member>
+        <member name="M:Leadtools.Services.Tools.Cache.ICacheManager.CreatePolicy(System.String)">
+            <summary>
+            Creates a cache item policy for the specified cache name
+            </summary>
+            <param name="cacheName">Cache name to use. Cannot be NULL.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Leadtools.Services.Tools.Cache.ICacheManager.CreatePolicy(Leadtools.Caching.ObjectCache)">
+            <summary>
+            Creates a cache item policy for the specified cache
+            </summary>
+            <param name="objectCache">Cache to use. Cannot be NULL.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Leadtools.Services.Tools.Cache.ICacheManager.GetCacheStatistics(System.String)">
+            <summary>
+            Gets the cache statistics
+            </summary>
+            <param name="cacheName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Leadtools.Services.Tools.Cache.ICacheManager.RemoveExpiredItems(System.String)">
+            <summary>
+            Cleans the cache items
+            </summary>
+            <param name="cacheName"></param>
+        </member>
+        <member name="P:Leadtools.Services.Tools.Cache.ICacheManager.DefaultCache">
+            <summary>
+            Return the default cache.
+            </summary>
+        </member>
+        <member name="M:Leadtools.Services.Tools.Cache.ICacheManager.GetCacheByName(System.String)">
+            <summary>
+            Gets a cache by name.
+            </summary>
+            <param name="cacheName"></param>
+            <returns>ObjectCache</returns>
+        </member>
+        <member name="M:Leadtools.Services.Tools.Cache.ICacheManager.GetCacheName(Leadtools.Caching.ObjectCache)">
+            <summary>
+            Gets the name of this cache.
+            </summary>
+            <param name="objectCache">ObjectCache</param>
+            <returns></returns>
+        </member>
+        <member name="M:Leadtools.Services.Tools.Cache.ICacheManager.GetCacheForDocument(System.String)">
+            <summary>
+            Get the cache where this document is stored.
+            </summary>
+            <param name="documentId"></param>
+            <returns>ObjectCache or null if the document is not found in any of the caches.</returns>
+        </member>
+        <member name="M:Leadtools.Services.Tools.Cache.ICacheManager.GetCacheForDocumentOrDefault(System.String)">
+            <summary>
+            Get the cache where this document is stored. If not found, return the default cache
+            </summary>
+            <param name="documentId"></param>
+            <returns>ObjectCache or the default cache if the document is not found in any of the caches.</returns>
+        </member>
+        <member name="M:Leadtools.Services.Tools.Cache.ICacheManager.GetCacheForDocument(System.Uri)">
+            <summary>
+            Get the cache where this document is stored.
+            </summary>
+            <param name="documentUri">leadcache:// document.</param>
+            <returns>ObjectCache or null if the document is not found in any of the caches.</returns>
+        </member>
+        <member name="M:Leadtools.Services.Tools.Cache.ICacheManager.GetCacheForDocumentOrDefault(System.Uri)">
+            <summary>
+            Get the cache where this document is stored.. If not found, return the default cache
+            </summary>
+            <param name="documentUri">leadcache:// document.</param>
+            <returns>ObjectCache or the default cache if the document is not found in any of the caches.</returns>
+        </member>
+        <member name="M:Leadtools.Services.Tools.Cache.ICacheManager.GetCacheForLoadFromUri(System.Uri,Leadtools.Document.LoadDocumentOptions)">
+            <summary>
+            Get the cache to store a new document, called by LoadFromUri
+            </summary>
+            <param name="uri"></param>
+            <param name="loadDocumentOptions"></param>
+            <returns>ObjectCache</returns>
+        </member>
+        <member name="M:Leadtools.Services.Tools.Cache.ICacheManager.GetCacheForBeginUpload(Leadtools.Document.UploadDocumentOptions)">
+            <summary>
+            Get the cache to store a new document, called by BeginUpload and Convert
+            </summary>
+            <param name="uploadDocumentOptions"></param>
+            <returns>ObjectCache</returns>
+        </member>
+        <member name="M:Leadtools.Services.Tools.Cache.ICacheManager.GetCacheForCreate(Leadtools.Document.CreateDocumentOptions)">
+            <summary>
+            Get the cache to store new virtual document. Called by Create
+            </summary>
+            <param name="createDocumentOptions">Options</param>
+            <returns>ObjectCache</returns>
+        </member>
+        <member name="F:Leadtools.Services.Tools.Helpers.OcrEngineStatus.Unset">
+            <summary>
+              The OCR Engine was not set, and thus is not being used.
+            </summary>
+        </member>
+        <member name="F:Leadtools.Services.Tools.Helpers.OcrEngineStatus.Error">
+            <summary>
+              An error occurred with the setup.
+            </summary>
+        </member>
+        <member name="F:Leadtools.Services.Tools.Helpers.OcrEngineStatus.Ready">
+            <summary>
+              The OCR Engine should be working normally.
+            </summary>
+        </member>
+        <member name="T:DocumentService.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:DocumentService.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:DocumentService.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:DocumentService.Properties.Resources.Invalid">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+        <member name="P:DocumentService.Properties.Resources.NotAvailableLarge">
+            <summary>
+              Looks up a localized resource of type System.Byte[].
+            </summary>
+        </member>
+    </members>
+</doc>
